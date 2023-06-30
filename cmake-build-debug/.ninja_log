@@ -1,0 +1,13 @@
+# ninja log v5
+0	369	1688115601362817333	CMakeFiles/Blackjack.dir/main.cpp.o	842fd0ff639f7989
+1	375	1688115601368613363	CMakeFiles/Blackjack.dir/src/Card.cpp.o	42824dc8b21ea875
+1	387	1688115601380651839	CMakeFiles/Blackjack.dir/src/Player.cpp.o	37e2a0266ff47397
+6	355	1688116618099621074	CMakeFiles/Blackjack.dir/src/Card.cpp.o	42824dc8b21ea875
+6	371	1688116618115307905	CMakeFiles/Blackjack.dir/src/Player.cpp.o	37e2a0266ff47397
+7	370	1688116623728584032	CMakeFiles/Blackjack.dir/main.cpp.o	842fd0ff639f7989
+6	392	1688116654079438075	CMakeFiles/Blackjack.dir/src/Deck.cpp.o	8b2ff246fd064ac6
+392	604	1688116654293809760	Blackjack	c442b3a2c12f4415
+7	363	1688116679018702736	CMakeFiles/Blackjack.dir/main.cpp.o	842fd0ff639f7989
+363	399	1688116679057611173	Blackjack	c442b3a2c12f4415
+7	375	1688116693438292252	CMakeFiles/Blackjack.dir/main.cpp.o	842fd0ff639f7989
+375	412	1688116693476941820	Blackjack	c442b3a2c12f4415
