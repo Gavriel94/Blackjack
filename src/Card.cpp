@@ -46,11 +46,11 @@ std::string Card::getValue() const {
         case TEN:
             return "10";
         case JACK:
-            return "Jack";
+            return "10";
         case QUEEN:
-            return "Queen";
+            return "10";
         case KING:
-            return "King";
+            return "10";
         case ACE:
             return "Ace";
         case enumValueEnd:
@@ -66,4 +66,16 @@ std::ostream& operator<<(std::ostream& output, const Card& card) {
 
     output << value << " of " << suit << "\n";
     return output;
+}
+
+bool operator==(const Card& card1, const Card& card2)  {
+    bool compareValue = false;
+    bool compareSuit = false;
+    if(card1.getValue() == card2.getValue()) {
+        compareValue = true;
+    }
+    if(card1.getSuit() == card2.getSuit()) {
+        compareSuit = true;
+    }
+    return compareValue == compareSuit;
 }
