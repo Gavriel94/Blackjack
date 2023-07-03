@@ -2,22 +2,17 @@
 // Created by Anthony Gavriel on 30/06/2023.
 //
 
-#include <functional>
 #include <iostream>
 
 #include "CardTest.cpp"
 #include "DeckTest.cpp"
 #include "PlayerTest.cpp"
 #include "DealerTest.cpp"
+#include "GameComponentsTest.cpp"
 
 class UnitTest {
 public:
     UnitTest() = default;
-
-    void callClassTest(const std::function<void()>& test, const std::string& testName) {
-        test();
-        functionFooter(testName);
-    }
 
     void cardTests() {
         std::string className = "Card";
@@ -66,11 +61,29 @@ public:
         newLine();
     }
 
+    void gameComponentsTests() {
+        std::string className = "Components";
+        classTestHeader(className);
+
+        callClassTest([&]() { GameComponentsTest::getPlayersTest(); }, "getPlayers()");
+        callClassTest([&]() { GameComponentsTest::setupDeckTest(); }, "setupDeck()");
+        callClassTest([&]() { GameComponentsTest::setupDealerTest(); }, "setupDealer()");
+
+        classTestFooter(className);
+        newLine();
+    }
+
     void allTests() {
         cardTests();
         deckTests();
         playerTests();
         dealerTests();
+    }
+
+private:
+    void callClassTest(const std::function<void()>& test, const std::string& testName) {
+        test();
+        functionFooter(testName);
     }
 
     void classTestHeader(const std::string& testedClass) {
