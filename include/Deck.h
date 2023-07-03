@@ -13,9 +13,10 @@
 class Deck {
 public:
     Deck();
-    void createDeck();
+    void create();
     Card removeCard();
-    void shuffleDeck();
+    void shuffle();
+    std::vector<Card> getDeck();
 //    Functions for tests
     void printDeck();
     int getSize();
