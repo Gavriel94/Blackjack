@@ -6,23 +6,41 @@
 #define BLACKJACK_PLAYER_H
 
 #include "Card.h"
+#include "Deck.h"
 #include <vector>
+#include <utility>
+
+/**
+ * Tests for:
+ *
+ * - getName()
+ * - ace()
+ * - receiveCard()
+ * -
+ */
 
 class Player {
 public:
     Player(std::string name);
-    std::vector<Card> hand;
+    void receiveCard(Deck &deck);
+    int ace();
     int getHandValue();
-    std::string viewCards();
+    std::vector<Card> getHand();
+    bool getBlackjack();
     bool hit();
-    bool stick();
+    void stick();
     bool isPlaying();
+    bool isBust();
+    std::string getName();
+    void printHand();
+    void receiveCard(Card card);
 private:
     std::string name;
+    std::vector<Card> hand;
     bool playing;
+    bool bust;
+    bool blackjack;
     int handValue;
-    int ace();
-
 };
 
 #endif //BLACKJACK_PLAYER_H
