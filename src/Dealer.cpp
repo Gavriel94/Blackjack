@@ -8,6 +8,7 @@ Dealer::Dealer() {
     hand = {};
     bust = false;
     handValue = 0;
+    playing = true;
 }
 
 void Dealer::startGame(Deck &deck, std::vector<Player> &players) {
