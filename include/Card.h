@@ -9,8 +9,6 @@
 
 class Card {
 public:
-    Card(auto suit, auto value);
-
     enum Value {
         TWO = 2,
         THREE,
@@ -28,17 +26,19 @@ public:
         enumValueEnd
     };
     enum Suit {
-        DIAMONDS,
+        DIAMONDS = 0,
         SPADES,
         CLUBS,
         HEARTS,
         enumSuitEnd
     };
+
     Card(Card::Suit suit, Card::Value value);
     std::string getSuit() const;
     std::string getValue() const;
 private:
     friend std::ostream& operator<<(std::ostream& output, const Card& card);
+    friend bool operator==(const Card& card1, const Card& card2);
     Value value;
     Suit suit;
 };
