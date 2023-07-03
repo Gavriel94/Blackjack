@@ -3,6 +3,7 @@
 #include "include/Player.h"
 #include "include/Dealer.h"
 #include "Tests/UnitTests.cpp"
+#include "include/GameComponents.h"
 
 void runTests(const std::string& testClass) {
     UnitTest unitTest = UnitTest();
@@ -29,6 +30,15 @@ void runTests(const std::string& testClass) {
 }
 
 void runGame() {
+
+    GameComponents game = GameComponents();
+    std::vector<Player> players = game.setupPlayers();
+    Deck deck = game.setupDeck();
+    Dealer dealer = game.setupDealer();
+
+    game.gameIntro();
+
+
 
 }
 
