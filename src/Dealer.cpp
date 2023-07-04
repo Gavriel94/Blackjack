@@ -9,6 +9,7 @@ Dealer::Dealer() {
     bust = false;
     handValue = 0;
     playing = true;
+    blackjack = false;
 }
 
 void Dealer::startGame(Deck &deck, std::vector<Player> &players) {
@@ -77,4 +78,3 @@ void Dealer::printHand() {
         std::cout << card.getValue() << " of " << card.getSuit() << "\n";
     }
 }
-
