@@ -3,6 +3,7 @@
 //
 
 #include "../include/Deck.h"
+#include "../include/Player.h"
 
 Deck::Deck() = default;
 
@@ -20,9 +21,27 @@ void Deck::create() {
             auto suit = (Card::Suit) i;
             auto value = (Card::Value) j;
             Card card(suit, value);
+
+            switch(i) {
+                case 0:
+                    card.setDiamondAscii(j);
+                    break;
+                case 1:
+                    card.setSpadeAscii(j);
+                    break;
+                case 2:
+                    card.setClubAscii(j);
+                    break;
+                case 3:
+                    card.setHeartAscii(j);
+                    break;
+                default:
+                    std::cout << "Error setting Ascii";
+            }
             deck.push_back(card);
         }
     }
+
 }
 
 /**

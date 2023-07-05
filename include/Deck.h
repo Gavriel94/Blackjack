@@ -5,10 +5,10 @@
 #ifndef BLACKJACK_DECK_H
 #define BLACKJACK_DECK_H
 
-#include "Card.h"
 #include <iostream>
 #include <vector>
 #include <random>
+#include "Card.h"
 
 class Deck {
 public:
