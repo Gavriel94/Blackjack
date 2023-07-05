@@ -61,7 +61,7 @@ public:
         std::cout << "\n";
         assert(bob.getHand() == testHand);
         assert(bob.getBlackjack() == true);
-        assert(bob.isPlaying() == false);
+        assert(bob.getPlaying() == false);
         assert(bob.getHandValue() == 21);
 
         testHand.clear();
@@ -70,7 +70,7 @@ public:
 
         Card seven = Card(Card::CLUBS, Card::SEVEN);
         alice.receiveCard(seven);
-        assert(alice.isPlaying() == true);
+        assert(alice.getPlaying() == true);
         assert(alice.getHandValue() == 7);
         std::cout << "\n";
     }
@@ -84,7 +84,7 @@ public:
         assert(bob.getHandValue() == 20);
         bob.receiveCard(Card(Card::HEARTS, Card::JACK));
         assert(bob.getHandValue() == 30);
-        assert(bob.isPlaying() == false);
+        assert(bob.getPlaying() == false);
         assert(bob.isBust() == true);
     }
 };
