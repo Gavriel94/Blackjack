@@ -17,7 +17,15 @@ public:
     std::vector<Player> setupPlayers();
     Deck setupDeck();
     Dealer setupDealer();
-    void gameLoop();
+    std::vector<std::string> printHandHelper(const std::string &card, char delim);
+    std::string getBustGraphic();
+    std::string getCardsGraphic();
+    std::string getBlackjackGraphic();
+private:
+    std::string bustGraphic;
+    std::string cardsGraphic;
+    std::string blackjackGraphic;
+    std::string stickGraphic;
 };
 
 #endif //BLACKJACK_GAMECOMPONENTS_H
