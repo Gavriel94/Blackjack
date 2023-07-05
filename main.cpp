@@ -67,9 +67,8 @@ void runGame() {
             if(hit) {
                 Card card = deck.removeCard();
                 player.receiveCard(card);
-                player.printHand();
                 if(player.isBust()) {
-                    std::cout << game.getBustGraphic();
+                    std::cout << game.getBustGraphic(player.getName(), player.getHandValue());
                 }
                 if(player.getBlackjack()) {
                     std::cout << game.getBlackjackGraphic();
@@ -77,7 +76,6 @@ void runGame() {
                 }
             } else {
                 player.stick();
-                player.printHand();
             }
         }
     }
@@ -87,7 +85,7 @@ void runGame() {
         dealer.receiveCard(card);
         dealer.printHand();
         if(dealer.getBust()) {
-            std::cout << game.getBustGraphic();
+            std::cout << game.getBustGraphic("Dealer", dealer.getHandValue());
         }
         if(dealer.getBlackjack()) {
             std::cout << game.getBlackjackGraphic();
