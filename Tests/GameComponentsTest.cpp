@@ -43,4 +43,29 @@ public:
 
         assert(dealer.getPlaying() == true);
     }
+
+    static void testPrintHandHelper() {
+        GameComponents gameComponents = GameComponents();
+
+        Card ace = Card(Card::SPADES, Card::ACE);
+        ace.setSpadeAscii(14);
+        Card king = Card(Card::HEARTS, Card::KING);
+        king.setHeartAscii(13);
+
+        std::vector<Card> cardVector = {};
+        cardVector.push_back(ace);
+        cardVector.push_back(king);
+
+        std::vector<std::vector<std::string>> cardLines;
+        for (const auto &card: cardVector) {
+            cardLines.push_back(gameComponents.printHandHelper(card.getAscii(), '\n'));
+        }
+
+        for(size_t i = 0; i < cardLines[0].size(); ++i) {
+            for(const auto& card : cardLines) {
+                std::cout << card[i] << " ";
+            }
+            std::cout << "\n";
+        }
+    }
 };
