@@ -3,6 +3,7 @@
 //
 
 #include "../include/Player.h"
+#include "../include/GameComponents.h"
 
 Player::Player(std::string name) {
     this -> name = std::move(name);
@@ -13,6 +14,7 @@ Player::Player(std::string name) {
 }
 
 void Player::receiveCard(Card card) {
+    handRepresentation.push_back(card.getAscii());
     int value = 0;
     if(card.getValue() == "Ace") {
         value = ace();
@@ -26,25 +28,30 @@ void Player::receiveCard(Card card) {
         playing = false;
     }
     if(handValue == 21 && hand.size() == 2) {
-        std::cout << "Blackjack!";
         playing = false;
         blackjack = true;
     }
 }
 
 int Player::ace() {
-    int choice;
-    std::cout << "Would you like the Ace to be a 1 or 11?\n";
-    std::cout << "Type '1' or '11' and press enter.\n";
-    std::cin >> choice;
+    int choice = 0;
+    while(choice != 1 && choice != 11) {
+        std::cout << name << ", would you like the Ace to be a 1 or 11?\n";
+        std::cout << "Type '1' or '11' and press enter.\n";
+        std::cin >> choice;
+        if(std::cin.fail()) {
+            std::cin.clear(); // clear fail state
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else if(choice != 1 && choice != 11) {
+            std::cout << "Invalid input.\n"
+                         "Type '1' or '11' and press enter.\n\n";
+        }
+    }
     switch(choice) {
         case 1:
             return 1;
         case 11:
             return 11;
-        default:
-            std::cout << "Please select a valid option: (1/11).\n";
-            std::cin >> choice;
     }
     return 1;
 }
@@ -57,15 +64,34 @@ std::vector<Card> Player::getHand() {
     return hand;
 }
 
-bool Player::hit() {
-    return true;
+bool Player::hitOrStick() {
+    int choice = 0;
+    while(choice < 1 || choice > 2) {
+        std::cout << name << ", hit or stick?\n";
+        std::cout << "Type 1 for hit or 2 for stick and press enter:\n";
+        std::cin >> choice;
+        if(std::cin.fail()) {
+            std::cin.clear(); // clear fail state
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else if(choice < 1 || choice > 2) {
+            std::cout << "Invalid input.\n"
+                         "Press 1 for hit or 2 for stick:\n\n";
+        } else {
+            break;
+        }
+    }
+    switch(choice) {
+        case 1:
+            return true;
+        case 2:
+            playing = false;
+            return false;
+    }
+
+    return false;
 }
 
-void Player::stick() {
-    playing = false;
-}
-
-bool Player::isPlaying() {
+bool Player::getPlaying() {
     return playing;
 }
 
@@ -82,8 +108,35 @@ bool Player::getBlackjack() {
 }
 
 void Player::printHand() {
-    std::cout << name << "'s cards\n";
-    for(auto card: hand) {
-        std::cout << card.getValue() << " of " << card.getSuit() << "\n";
+    std::string line = "*----------------------------------*\n";
+
+    std::cout << line;
+    std::cout << "           " << name << "'s  Cards          \n";
+    std::cout << line;
+
+    GameComponents gameComponents = GameComponents();
+
+    std::vector<std::vector<std::string>> cardLines;
+    for (const auto &card: hand) {
+        cardLines.push_back(gameComponents.printHandHelper(card.getAscii(), '\n'));
     }
+
+    for(size_t i = 0; i < cardLines[0].size(); ++i) {
+        for(const auto& card : cardLines) {
+            std::cout << card[i] << " ";
+        }
+        std::cout << "\n";
+    }
+
+    std::cout << line;
+    std::cout << "          Hand value: " << getHandValue() << "          \n";
+    std::cout << line;
+}
+
+void Player::stick() {
+    std::string line = "*----------------------------------*\n";
+
+    std::cout << line;
+    std::cout << "           " << name << " sticks with " << handValue << "             \n";
+    std::cout << line;
 }
