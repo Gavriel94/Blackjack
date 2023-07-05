@@ -18,11 +18,10 @@ public:
     Deck setupDeck();
     Dealer setupDealer();
     std::vector<std::string> printHandHelper(const std::string &card, char delim);
-    std::string getBustGraphic();
+    std::string getBustGraphic(std::string name, int value);
     std::string getCardsGraphic();
     std::string getBlackjackGraphic();
 private:
-    std::string bustGraphic;
     std::string cardsGraphic;
     std::string blackjackGraphic;
     std::string stickGraphic;
