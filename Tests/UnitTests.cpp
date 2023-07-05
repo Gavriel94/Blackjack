@@ -68,6 +68,7 @@ public:
         callClassTest([&]() { GameComponentsTest::getPlayersTest(); }, "getPlayers()");
         callClassTest([&]() { GameComponentsTest::setupDeckTest(); }, "setupDeck()");
         callClassTest([&]() { GameComponentsTest::setupDealerTest(); }, "setupDealer()");
+        callClassTest([&]() { GameComponentsTest::testPrintHandHelper(); }, "printHandHelper()");
 
         classTestFooter(className);
         newLine();
