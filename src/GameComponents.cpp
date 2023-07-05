@@ -6,11 +6,6 @@
 #include "../include/GameComponents.h"
 
 GameComponents::GameComponents() {
-    bustGraphic = "           '.  \\ | /  ,'\n"
-                  "              `. `.' ,'\n"
-                  "             ( .`.|,' .)\n"
-                  "             --  BUST --\n";
-
     cardsGraphic = "     _____\n"
                    "    |A .  | _____\n"
                    "    | /.\\ ||A ^  | _____\n"
@@ -51,7 +46,12 @@ GameComponents::GameComponents() {
                        "   \\______________________________________/\n";
 }
 
-std::string GameComponents::getBustGraphic() {
+std::string GameComponents::getBustGraphic(std::string name, int value) {
+    std::string bustGraphic = "           '.  \\ | /  ,'\n"
+                  "              `. `.' ,'\n"
+                  "             ( .`.|,' .)\n"
+                  "              -- BUST --\n"
+                  "             " + name +  ": " + std::to_string(value) +"  \n";
     return bustGraphic;
 }
 
