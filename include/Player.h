@@ -5,31 +5,21 @@
 #ifndef BLACKJACK_PLAYER_H
 #define BLACKJACK_PLAYER_H
 
-#include "Card.h"
-#include "Deck.h"
 #include <vector>
 #include <utility>
-
-/**
- * Tests for:
- *
- * - getName()
- * - ace()
- * - receiveCard()
- * -
- */
+#include "Card.h"
+#include "Deck.h"
 
 class Player {
 public:
     Player(std::string name);
-    void receiveCard(Deck &deck);
     int ace();
     int getHandValue();
     std::vector<Card> getHand();
     bool getBlackjack();
-    bool hit();
     void stick();
-    bool isPlaying();
+    bool hitOrStick();
+    bool getPlaying();
     bool isBust();
     std::string getName();
     void printHand();
@@ -37,6 +27,7 @@ public:
 private:
     std::string name;
     std::vector<Card> hand;
+    std::vector<std::string> handRepresentation;
     bool playing;
     bool bust;
     bool blackjack;
