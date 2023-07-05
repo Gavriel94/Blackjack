@@ -3,6 +3,7 @@
 //
 
 #include "../include/Dealer.h"
+#include "../include/GameComponents.h"
 
 Dealer::Dealer() {
     hand = {};
@@ -34,6 +35,7 @@ std::vector<Card> Dealer::getHand() {
 }
 
 void Dealer::receiveCard(Card card) {
+    handRepresentation.push_back(card.getAscii());
     int value = 0;
     if(card.getValue() == "Ace") {
         if(handValue <= 10) {
@@ -47,15 +49,12 @@ void Dealer::receiveCard(Card card) {
     hand.push_back(card);
     handValue += value;
     if(handValue > 21) {
-        std::cout << "Dealer bust with " << handValue << "!\n";
         bust = true;
         playing = false;
     } else if(handValue == 21 && hand.size() == 2) {
-        std::cout << "Blackjack!\n";
-        playing = false;
         blackjack = true;
+        playing = false;
     } else if(handValue >= 17) {
-        std::cout << "Dealer sticks at " << handValue << "\n";
         playing = false;
     }
 }
@@ -73,8 +72,30 @@ bool Dealer::getPlaying() {
 }
 
 void Dealer::printHand() {
-    for(auto card: hand) {
-        std::cout << "Dealers cards\n";
-        std::cout << card.getValue() << " of " << card.getSuit() << "\n";
+    std::string line = "*----------------------------------*\n";
+
+    std::cout << line;
+    if(hand.size() == 1) {
+        std::cout << "            Dealers Card            \n";
+    } else {
+        std::cout << "            Dealers Cards           \n";
+    };
+    std::cout << line;
+
+    GameComponents gameComponents = GameComponents();
+
+    std::vector<std::vector<std::string>> cardLines;
+    for (const auto &card: hand) {
+        cardLines.push_back(gameComponents.printHandHelper(card.getAscii(), '\n'));
     }
+
+    for(size_t i = 0; i < cardLines[0].size(); ++i) {
+        for(const auto& card : cardLines) {
+            std::cout << card[i] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << line;
+    std::cout << "        Hand value: " << getHandValue() << "          \n";
+    std::cout << line;
 }

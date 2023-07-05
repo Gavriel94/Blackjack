@@ -24,6 +24,7 @@ public:
     bool getBlackjack();
 private:
     std::vector<Card> hand;
+    std::vector<std::string> handRepresentation;
     bool bust;
     int handValue;
     bool playing;
