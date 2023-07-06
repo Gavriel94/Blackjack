@@ -21,7 +21,7 @@ GameComponents::GameComponents() = default;
                  "  `. `.' ,'\n"
                  " ( .`.|,' .)\n"
                  "  -- BUST --\n"
-                 " " + name +  ": " + std::to_string(value) +" \n\n";
+                 "  " + name +  ": " + std::to_string(value) +" \n\n";
 }
 
 /**
