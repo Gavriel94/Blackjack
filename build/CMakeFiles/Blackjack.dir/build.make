@@ -125,66 +125,24 @@ CMakeFiles/Blackjack.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Player.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Player.cpp -o CMakeFiles/Blackjack.dir/src/Player.cpp.s
 
-CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp
-CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp
+CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Tests/CardTest.cpp
+CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o -MF CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Tests/CardTest.cpp
 
-CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp > CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.i
+CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/Tests/CardTest.cpp > CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.i
 
-CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp -o CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.s
-
-CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp
-CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp
-
-CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp > CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.i
-
-CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp -o CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.s
-
-CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp
-CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp
-
-CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp > CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.i
-
-CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp -o CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.s
-
-CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp
-CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp
-
-CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp > CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.i
-
-CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp -o CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.s
+CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Tests/CardTest.cpp -o CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.s
 
 CMakeFiles/Blackjack.dir/src/Dealer.cpp.o: CMakeFiles/Blackjack.dir/flags.make
 CMakeFiles/Blackjack.dir/src/Dealer.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Dealer.cpp
 CMakeFiles/Blackjack.dir/src/Dealer.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Blackjack.dir/src/Dealer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Blackjack.dir/src/Dealer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Dealer.cpp.o -MF CMakeFiles/Blackjack.dir/src/Dealer.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Dealer.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Dealer.cpp
 
 CMakeFiles/Blackjack.dir/src/Dealer.cpp.i: cmake_force
@@ -195,24 +153,10 @@ CMakeFiles/Blackjack.dir/src/Dealer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Dealer.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Dealer.cpp -o CMakeFiles/Blackjack.dir/src/Dealer.cpp.s
 
-CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp
-CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp
-
-CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp > CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.i
-
-CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp -o CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.s
-
 CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o: CMakeFiles/Blackjack.dir/flags.make
 CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/GameComponents.cpp
 CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o -MF CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o.d -o CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/GameComponents.cpp
 
 CMakeFiles/Blackjack.dir/src/GameComponents.cpp.i: cmake_force
@@ -223,19 +167,89 @@ CMakeFiles/Blackjack.dir/src/GameComponents.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/GameComponents.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/GameComponents.cpp -o CMakeFiles/Blackjack.dir/src/GameComponents.cpp.s
 
-CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
-CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp
-CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o -MF CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o.d -o CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp
+CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/TestingSuite.cpp
+CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o -MF CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o.d -o CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/TestingSuite.cpp
 
-CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp > CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.i
+CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/TestingSuite.cpp > CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.i
 
-CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp -o CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.s
+CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/TestingSuite.cpp -o CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.s
+
+CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Tests/DealerTest.cpp
+CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o -MF CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Tests/DealerTest.cpp
+
+CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/Tests/DealerTest.cpp > CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.i
+
+CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Tests/DealerTest.cpp -o CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.s
+
+CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Tests/DeckTest.cpp
+CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o -MF CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Tests/DeckTest.cpp
+
+CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/Tests/DeckTest.cpp > CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.i
+
+CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Tests/DeckTest.cpp -o CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.s
+
+CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Tests/GameComponentsTest.cpp
+CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o -MF CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Tests/GameComponentsTest.cpp
+
+CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/Tests/GameComponentsTest.cpp > CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.i
+
+CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Tests/GameComponentsTest.cpp -o CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.s
+
+CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/Tests/PlayerTest.cpp
+CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o -MF CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o.d -o CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/Tests/PlayerTest.cpp
+
+CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/Tests/PlayerTest.cpp > CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.i
+
+CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/Tests/PlayerTest.cpp -o CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.s
+
+CMakeFiles/Blackjack.dir/src/RunGame.cpp.o: CMakeFiles/Blackjack.dir/flags.make
+CMakeFiles/Blackjack.dir/src/RunGame.cpp.o: /Users/anthonygavriel/Local/Blackjack/src/RunGame.cpp
+CMakeFiles/Blackjack.dir/src/RunGame.cpp.o: CMakeFiles/Blackjack.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Blackjack.dir/src/RunGame.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Blackjack.dir/src/RunGame.cpp.o -MF CMakeFiles/Blackjack.dir/src/RunGame.cpp.o.d -o CMakeFiles/Blackjack.dir/src/RunGame.cpp.o -c /Users/anthonygavriel/Local/Blackjack/src/RunGame.cpp
+
+CMakeFiles/Blackjack.dir/src/RunGame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Blackjack.dir/src/RunGame.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anthonygavriel/Local/Blackjack/src/RunGame.cpp > CMakeFiles/Blackjack.dir/src/RunGame.cpp.i
+
+CMakeFiles/Blackjack.dir/src/RunGame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Blackjack.dir/src/RunGame.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anthonygavriel/Local/Blackjack/src/RunGame.cpp -o CMakeFiles/Blackjack.dir/src/RunGame.cpp.s
 
 # Object files for target Blackjack
 Blackjack_OBJECTS = \
@@ -243,14 +257,15 @@ Blackjack_OBJECTS = \
 "CMakeFiles/Blackjack.dir/src/Card.cpp.o" \
 "CMakeFiles/Blackjack.dir/src/Deck.cpp.o" \
 "CMakeFiles/Blackjack.dir/src/Player.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o" \
 "CMakeFiles/Blackjack.dir/src/Dealer.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o" \
 "CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o" \
-"CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o"
+"CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o" \
+"CMakeFiles/Blackjack.dir/src/RunGame.cpp.o"
 
 # External object files for target Blackjack
 Blackjack_EXTERNAL_OBJECTS =
@@ -259,17 +274,18 @@ Blackjack: CMakeFiles/Blackjack.dir/main.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/src/Card.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/src/Deck.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/src/Player.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/src/Dealer.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o
-Blackjack: CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o
+Blackjack: CMakeFiles/Blackjack.dir/src/RunGame.cpp.o
 Blackjack: CMakeFiles/Blackjack.dir/build.make
 Blackjack: CMakeFiles/Blackjack.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Blackjack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/anthonygavriel/Local/Blackjack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Blackjack"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Blackjack.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

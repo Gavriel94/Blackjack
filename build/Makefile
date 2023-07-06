@@ -129,150 +129,6 @@ Blackjack/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/build
 .PHONY : Blackjack/fast
 
-Tests/CardTest.o: Tests/CardTest.cpp.o
-.PHONY : Tests/CardTest.o
-
-# target to build an object file
-Tests/CardTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o
-.PHONY : Tests/CardTest.cpp.o
-
-Tests/CardTest.i: Tests/CardTest.cpp.i
-.PHONY : Tests/CardTest.i
-
-# target to preprocess a source file
-Tests/CardTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.i
-.PHONY : Tests/CardTest.cpp.i
-
-Tests/CardTest.s: Tests/CardTest.cpp.s
-.PHONY : Tests/CardTest.s
-
-# target to generate assembly for a file
-Tests/CardTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.s
-.PHONY : Tests/CardTest.cpp.s
-
-Tests/DealerTest.o: Tests/DealerTest.cpp.o
-.PHONY : Tests/DealerTest.o
-
-# target to build an object file
-Tests/DealerTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o
-.PHONY : Tests/DealerTest.cpp.o
-
-Tests/DealerTest.i: Tests/DealerTest.cpp.i
-.PHONY : Tests/DealerTest.i
-
-# target to preprocess a source file
-Tests/DealerTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.i
-.PHONY : Tests/DealerTest.cpp.i
-
-Tests/DealerTest.s: Tests/DealerTest.cpp.s
-.PHONY : Tests/DealerTest.s
-
-# target to generate assembly for a file
-Tests/DealerTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.s
-.PHONY : Tests/DealerTest.cpp.s
-
-Tests/DeckTest.o: Tests/DeckTest.cpp.o
-.PHONY : Tests/DeckTest.o
-
-# target to build an object file
-Tests/DeckTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o
-.PHONY : Tests/DeckTest.cpp.o
-
-Tests/DeckTest.i: Tests/DeckTest.cpp.i
-.PHONY : Tests/DeckTest.i
-
-# target to preprocess a source file
-Tests/DeckTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.i
-.PHONY : Tests/DeckTest.cpp.i
-
-Tests/DeckTest.s: Tests/DeckTest.cpp.s
-.PHONY : Tests/DeckTest.s
-
-# target to generate assembly for a file
-Tests/DeckTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.s
-.PHONY : Tests/DeckTest.cpp.s
-
-Tests/GameComponentsTest.o: Tests/GameComponentsTest.cpp.o
-.PHONY : Tests/GameComponentsTest.o
-
-# target to build an object file
-Tests/GameComponentsTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o
-.PHONY : Tests/GameComponentsTest.cpp.o
-
-Tests/GameComponentsTest.i: Tests/GameComponentsTest.cpp.i
-.PHONY : Tests/GameComponentsTest.i
-
-# target to preprocess a source file
-Tests/GameComponentsTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.i
-.PHONY : Tests/GameComponentsTest.cpp.i
-
-Tests/GameComponentsTest.s: Tests/GameComponentsTest.cpp.s
-.PHONY : Tests/GameComponentsTest.s
-
-# target to generate assembly for a file
-Tests/GameComponentsTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.s
-.PHONY : Tests/GameComponentsTest.cpp.s
-
-Tests/PlayerTest.o: Tests/PlayerTest.cpp.o
-.PHONY : Tests/PlayerTest.o
-
-# target to build an object file
-Tests/PlayerTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o
-.PHONY : Tests/PlayerTest.cpp.o
-
-Tests/PlayerTest.i: Tests/PlayerTest.cpp.i
-.PHONY : Tests/PlayerTest.i
-
-# target to preprocess a source file
-Tests/PlayerTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.i
-.PHONY : Tests/PlayerTest.cpp.i
-
-Tests/PlayerTest.s: Tests/PlayerTest.cpp.s
-.PHONY : Tests/PlayerTest.s
-
-# target to generate assembly for a file
-Tests/PlayerTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.s
-.PHONY : Tests/PlayerTest.cpp.s
-
-Tests/UnitTests.o: Tests/UnitTests.cpp.o
-.PHONY : Tests/UnitTests.o
-
-# target to build an object file
-Tests/UnitTests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o
-.PHONY : Tests/UnitTests.cpp.o
-
-Tests/UnitTests.i: Tests/UnitTests.cpp.i
-.PHONY : Tests/UnitTests.i
-
-# target to preprocess a source file
-Tests/UnitTests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.i
-.PHONY : Tests/UnitTests.cpp.i
-
-Tests/UnitTests.s: Tests/UnitTests.cpp.s
-.PHONY : Tests/UnitTests.s
-
-# target to generate assembly for a file
-Tests/UnitTests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.s
-.PHONY : Tests/UnitTests.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -417,6 +273,174 @@ src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/RunGame.o: src/RunGame.cpp.o
+.PHONY : src/RunGame.o
+
+# target to build an object file
+src/RunGame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/RunGame.cpp.o
+.PHONY : src/RunGame.cpp.o
+
+src/RunGame.i: src/RunGame.cpp.i
+.PHONY : src/RunGame.i
+
+# target to preprocess a source file
+src/RunGame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/RunGame.cpp.i
+.PHONY : src/RunGame.cpp.i
+
+src/RunGame.s: src/RunGame.cpp.s
+.PHONY : src/RunGame.s
+
+# target to generate assembly for a file
+src/RunGame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/RunGame.cpp.s
+.PHONY : src/RunGame.cpp.s
+
+src/TestingSuite.o: src/TestingSuite.cpp.o
+.PHONY : src/TestingSuite.o
+
+# target to build an object file
+src/TestingSuite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o
+.PHONY : src/TestingSuite.cpp.o
+
+src/TestingSuite.i: src/TestingSuite.cpp.i
+.PHONY : src/TestingSuite.i
+
+# target to preprocess a source file
+src/TestingSuite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.i
+.PHONY : src/TestingSuite.cpp.i
+
+src/TestingSuite.s: src/TestingSuite.cpp.s
+.PHONY : src/TestingSuite.s
+
+# target to generate assembly for a file
+src/TestingSuite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.s
+.PHONY : src/TestingSuite.cpp.s
+
+src/Tests/CardTest.o: src/Tests/CardTest.cpp.o
+.PHONY : src/Tests/CardTest.o
+
+# target to build an object file
+src/Tests/CardTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o
+.PHONY : src/Tests/CardTest.cpp.o
+
+src/Tests/CardTest.i: src/Tests/CardTest.cpp.i
+.PHONY : src/Tests/CardTest.i
+
+# target to preprocess a source file
+src/Tests/CardTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.i
+.PHONY : src/Tests/CardTest.cpp.i
+
+src/Tests/CardTest.s: src/Tests/CardTest.cpp.s
+.PHONY : src/Tests/CardTest.s
+
+# target to generate assembly for a file
+src/Tests/CardTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.s
+.PHONY : src/Tests/CardTest.cpp.s
+
+src/Tests/DealerTest.o: src/Tests/DealerTest.cpp.o
+.PHONY : src/Tests/DealerTest.o
+
+# target to build an object file
+src/Tests/DealerTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o
+.PHONY : src/Tests/DealerTest.cpp.o
+
+src/Tests/DealerTest.i: src/Tests/DealerTest.cpp.i
+.PHONY : src/Tests/DealerTest.i
+
+# target to preprocess a source file
+src/Tests/DealerTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.i
+.PHONY : src/Tests/DealerTest.cpp.i
+
+src/Tests/DealerTest.s: src/Tests/DealerTest.cpp.s
+.PHONY : src/Tests/DealerTest.s
+
+# target to generate assembly for a file
+src/Tests/DealerTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.s
+.PHONY : src/Tests/DealerTest.cpp.s
+
+src/Tests/DeckTest.o: src/Tests/DeckTest.cpp.o
+.PHONY : src/Tests/DeckTest.o
+
+# target to build an object file
+src/Tests/DeckTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o
+.PHONY : src/Tests/DeckTest.cpp.o
+
+src/Tests/DeckTest.i: src/Tests/DeckTest.cpp.i
+.PHONY : src/Tests/DeckTest.i
+
+# target to preprocess a source file
+src/Tests/DeckTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.i
+.PHONY : src/Tests/DeckTest.cpp.i
+
+src/Tests/DeckTest.s: src/Tests/DeckTest.cpp.s
+.PHONY : src/Tests/DeckTest.s
+
+# target to generate assembly for a file
+src/Tests/DeckTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.s
+.PHONY : src/Tests/DeckTest.cpp.s
+
+src/Tests/GameComponentsTest.o: src/Tests/GameComponentsTest.cpp.o
+.PHONY : src/Tests/GameComponentsTest.o
+
+# target to build an object file
+src/Tests/GameComponentsTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o
+.PHONY : src/Tests/GameComponentsTest.cpp.o
+
+src/Tests/GameComponentsTest.i: src/Tests/GameComponentsTest.cpp.i
+.PHONY : src/Tests/GameComponentsTest.i
+
+# target to preprocess a source file
+src/Tests/GameComponentsTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.i
+.PHONY : src/Tests/GameComponentsTest.cpp.i
+
+src/Tests/GameComponentsTest.s: src/Tests/GameComponentsTest.cpp.s
+.PHONY : src/Tests/GameComponentsTest.s
+
+# target to generate assembly for a file
+src/Tests/GameComponentsTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.s
+.PHONY : src/Tests/GameComponentsTest.cpp.s
+
+src/Tests/PlayerTest.o: src/Tests/PlayerTest.cpp.o
+.PHONY : src/Tests/PlayerTest.o
+
+# target to build an object file
+src/Tests/PlayerTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o
+.PHONY : src/Tests/PlayerTest.cpp.o
+
+src/Tests/PlayerTest.i: src/Tests/PlayerTest.cpp.i
+.PHONY : src/Tests/PlayerTest.i
+
+# target to preprocess a source file
+src/Tests/PlayerTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.i
+.PHONY : src/Tests/PlayerTest.cpp.i
+
+src/Tests/PlayerTest.s: src/Tests/PlayerTest.cpp.s
+.PHONY : src/Tests/PlayerTest.s
+
+# target to generate assembly for a file
+src/Tests/PlayerTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Blackjack.dir/build.make CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.s
+.PHONY : src/Tests/PlayerTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -426,24 +450,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Blackjack"
-	@echo "... Tests/CardTest.o"
-	@echo "... Tests/CardTest.i"
-	@echo "... Tests/CardTest.s"
-	@echo "... Tests/DealerTest.o"
-	@echo "... Tests/DealerTest.i"
-	@echo "... Tests/DealerTest.s"
-	@echo "... Tests/DeckTest.o"
-	@echo "... Tests/DeckTest.i"
-	@echo "... Tests/DeckTest.s"
-	@echo "... Tests/GameComponentsTest.o"
-	@echo "... Tests/GameComponentsTest.i"
-	@echo "... Tests/GameComponentsTest.s"
-	@echo "... Tests/PlayerTest.o"
-	@echo "... Tests/PlayerTest.i"
-	@echo "... Tests/PlayerTest.s"
-	@echo "... Tests/UnitTests.o"
-	@echo "... Tests/UnitTests.i"
-	@echo "... Tests/UnitTests.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -462,6 +468,27 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/RunGame.o"
+	@echo "... src/RunGame.i"
+	@echo "... src/RunGame.s"
+	@echo "... src/TestingSuite.o"
+	@echo "... src/TestingSuite.i"
+	@echo "... src/TestingSuite.s"
+	@echo "... src/Tests/CardTest.o"
+	@echo "... src/Tests/CardTest.i"
+	@echo "... src/Tests/CardTest.s"
+	@echo "... src/Tests/DealerTest.o"
+	@echo "... src/Tests/DealerTest.i"
+	@echo "... src/Tests/DealerTest.s"
+	@echo "... src/Tests/DeckTest.o"
+	@echo "... src/Tests/DeckTest.i"
+	@echo "... src/Tests/DeckTest.s"
+	@echo "... src/Tests/GameComponentsTest.o"
+	@echo "... src/Tests/GameComponentsTest.i"
+	@echo "... src/Tests/GameComponentsTest.s"
+	@echo "... src/Tests/PlayerTest.o"
+	@echo "... src/Tests/PlayerTest.i"
+	@echo "... src/Tests/PlayerTest.s"
 .PHONY : help
 
 

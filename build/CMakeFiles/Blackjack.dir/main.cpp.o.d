@@ -1,6 +1,6 @@
 CMakeFiles/Blackjack.dir/main.cpp.o: \
   /Users/anthonygavriel/Local/Blackjack/main.cpp \
-  /Users/anthonygavriel/Local/Blackjack/include/Card.h \
+  /Users/anthonygavriel/Local/Blackjack/include/TestingSuite.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -732,6 +732,12 @@ CMakeFiles/Blackjack.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/CardTest.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/../Card.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/DealerTest.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/../Dealer.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Card.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Player.h \
   /Users/anthonygavriel/Local/Blackjack/include/Deck.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/random \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
@@ -781,17 +787,13 @@ CMakeFiles/Blackjack.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/seed_seq.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/anthonygavriel/Local/Blackjack/include/Player.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/DeckTest.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/../Deck.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/GameComponentsTest.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/../GameComponents.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
   /Users/anthonygavriel/Local/Blackjack/include/Dealer.h \
-  /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/../include/Card.h \
-  /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/../include/Deck.h \
-  /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/../include/Player.h \
-  /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/../include/Dealer.h \
-  /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp \
-  /Users/anthonygavriel/Local/Blackjack/Tests/../include/GameComponents.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/PlayerTest.h \
+  /Users/anthonygavriel/Local/Blackjack/include/Tests/../Player.h \
+  /Users/anthonygavriel/Local/Blackjack/include/RunGame.h \
   /Users/anthonygavriel/Local/Blackjack/include/GameComponents.h

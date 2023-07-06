@@ -73,29 +73,11 @@ build CMakeFiles/Blackjack.dir/src/Player.cpp.o: CXX_COMPILER__Blackjack_Debug /
   OBJECT_DIR = CMakeFiles/Blackjack.dir
   OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src
 
-build CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/UnitTests.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o.d
+build CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Tests/CardTest.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
   OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
-
-build CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/CardTest.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
-  OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
-
-build CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/DeckTest.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
-  OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
-
-build CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/PlayerTest.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
-  OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src/Tests
 
 build CMakeFiles/Blackjack.dir/src/Dealer.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Dealer.cpp || cmake_object_order_depends_target_Blackjack
   DEP_FILE = CMakeFiles/Blackjack.dir/src/Dealer.cpp.o.d
@@ -103,23 +85,47 @@ build CMakeFiles/Blackjack.dir/src/Dealer.cpp.o: CXX_COMPILER__Blackjack_Debug /
   OBJECT_DIR = CMakeFiles/Blackjack.dir
   OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src
 
-build CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/DealerTest.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
-  OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
-
 build CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/GameComponents.cpp || cmake_object_order_depends_target_Blackjack
   DEP_FILE = CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
   OBJECT_DIR = CMakeFiles/Blackjack.dir
   OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src
 
-build CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/Tests/GameComponentsTest.cpp || cmake_object_order_depends_target_Blackjack
-  DEP_FILE = CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o.d
+build CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/TestingSuite.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
   OBJECT_DIR = CMakeFiles/Blackjack.dir
-  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/Tests
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src
+
+build CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Tests/DealerTest.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src/Tests
+
+build CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Tests/DeckTest.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src/Tests
+
+build CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Tests/GameComponentsTest.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src/Tests
+
+build CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/Tests/PlayerTest.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src/Tests
+
+build CMakeFiles/Blackjack.dir/src/RunGame.cpp.o: CXX_COMPILER__Blackjack_Debug /Users/anthonygavriel/Local/Blackjack/src/RunGame.cpp || cmake_object_order_depends_target_Blackjack
+  DEP_FILE = CMakeFiles/Blackjack.dir/src/RunGame.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/Blackjack.dir
+  OBJECT_FILE_DIR = CMakeFiles/Blackjack.dir/src
 
 
 # =============================================================================
@@ -129,7 +135,7 @@ build CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o: CXX_COMPILER__Bla
 #############################################
 # Link the executable Blackjack
 
-build Blackjack: CXX_EXECUTABLE_LINKER__Blackjack_Debug CMakeFiles/Blackjack.dir/main.cpp.o CMakeFiles/Blackjack.dir/src/Card.cpp.o CMakeFiles/Blackjack.dir/src/Deck.cpp.o CMakeFiles/Blackjack.dir/src/Player.cpp.o CMakeFiles/Blackjack.dir/Tests/UnitTests.cpp.o CMakeFiles/Blackjack.dir/Tests/CardTest.cpp.o CMakeFiles/Blackjack.dir/Tests/DeckTest.cpp.o CMakeFiles/Blackjack.dir/Tests/PlayerTest.cpp.o CMakeFiles/Blackjack.dir/src/Dealer.cpp.o CMakeFiles/Blackjack.dir/Tests/DealerTest.cpp.o CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o CMakeFiles/Blackjack.dir/Tests/GameComponentsTest.cpp.o
+build Blackjack: CXX_EXECUTABLE_LINKER__Blackjack_Debug CMakeFiles/Blackjack.dir/main.cpp.o CMakeFiles/Blackjack.dir/src/Card.cpp.o CMakeFiles/Blackjack.dir/src/Deck.cpp.o CMakeFiles/Blackjack.dir/src/Player.cpp.o CMakeFiles/Blackjack.dir/src/Tests/CardTest.cpp.o CMakeFiles/Blackjack.dir/src/Dealer.cpp.o CMakeFiles/Blackjack.dir/src/GameComponents.cpp.o CMakeFiles/Blackjack.dir/src/TestingSuite.cpp.o CMakeFiles/Blackjack.dir/src/Tests/DealerTest.cpp.o CMakeFiles/Blackjack.dir/src/Tests/DeckTest.cpp.o CMakeFiles/Blackjack.dir/src/Tests/GameComponentsTest.cpp.o CMakeFiles/Blackjack.dir/src/Tests/PlayerTest.cpp.o CMakeFiles/Blackjack.dir/src/RunGame.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/Blackjack.dir
   POST_BUILD = :
