@@ -2,65 +2,62 @@
 // Created by Anthony Gavriel on 03/07/2023.
 //
 
-#include <sstream>
 #include "../include/GameComponents.h"
 
-GameComponents::GameComponents() {
-    cardsGraphic = "     _____\n"
-                   "    |A .  | _____\n"
-                   "    | /.\\ ||A ^  | _____\n"
-                   "    |(_._)|| / \\ ||A _  | _____\n"
-                   "    |  |  || \\ / || ( ) ||A_ _ |\n"
-                   "    |____V||  .  ||(_'_)||( v )|\n"
-                   "           |____V||  |  || \\ / |\n"
-                   "                  |____V||  .  |\n"
-                   "                         |____V|\n\n";
+/**
+ * Constructor for GameComponents object
+ */
+GameComponents::GameComponents() = default;
 
-    blackjackGraphic = "   ______________________________________\n"
-                       "   /   _______________________________    \\\n"
-                       "  |   |            __ __              |   |\n"
-                       "  | _ |    /\\     ) _) /''''',        |   |\n"
-                       "  |(.)|   <  >    \\ ) // '  `,        |   |\n"
-                       "  | ` |    \\/       \\/// ~ |~:    +   |   |\n"
-                       "  |   |             ///*\\  ' :    |   |   |\n"
-                       "  |   |            ///***\\_~.'    |   |   |\n"
-                       "  |   |  .'.    __///````,,..\\_   |   |   |\n"
-                       "  |   |   ` \\ _/* +_\\#\\\\~\\ooo/ \\  |   |   |\n"
-                       "  |   |     |/:\\ + *\\_\\#\\~\\so/!!\\ |   |   |\n"
-                       "  |   |    _\\_::\\ * + \\-\\#\\\\o/!!!\\|   |   |\n"
-                       "  |   |   / <_=::\\ + */_____@_!!!_|   |   |\n"
-                       "  |   |  <__/_____\\ */( /\\______ _|   |   |\n"
-                       "  |   |   |_   _ __\\/_)/* \\   ._/  >  |   |\n"
-                       "  |   |   | !!! @     /* + \\::=_>_/   |   |\n"
-                       "  |   |   |\\!!!/o\\\\#\\_\\ + * \\::_\\     |   |\n"
-                       "  |   |   | \\!!/os\\~\\#_\\_* + \\:/|     |   |\n"
-                       "  |   |   |  \\_/ooo\\~\\\\#_\\+_*/- \\     |   |\n"
-                       "  |   |   |    \\''``,,,,///      .`.  |   |\n"
-                       "  |   |   |     ,.- ***///        '   |   |\n"
-                       "  |   |   |    : ~  \\*///             |   |\n"
-                       "  |   |   +    : |   \\//\\             |   |\n"
-                       "  |   |        ,~  ~ //_( \\     /\\    | ; |\n"
-                       "  |   |        ,'  ` /_(__(    <  >   |(_)|\n"
-                       "  |   |********BLACKJACK********\\/    |   |\n"
-                       "  |   |_______________________________|   |\n"
-                       "   \\______________________________________/\n";
+/**
+ * ASCII art of an explosion representing `bust` which includes the players name and hand value
+ *
+ * @param name players name who went bust
+ * @param value value of the hand which caused them to go bust
+ * @return
+ */
+ void GameComponents::bustGraphic(const std::string& name, int value) {
+    std::cout << "\n'.  \\ | /  ,'\n"
+                 "  `. `.' ,'\n"
+                 " ( .`.|,' .)\n"
+                 "  -- BUST --\n"
+                 " " + name +  ": " + std::to_string(value) +" \n\n";
 }
 
-std::string GameComponents::getBustGraphic(std::string name, int value) {
-    std::string bustGraphic = "           '.  \\ | /  ,'\n"
-                  "              `. `.' ,'\n"
-                  "             ( .`.|,' .)\n"
-                  "              -- BUST --\n"
-                  "             " + name +  ": " + std::to_string(value) +"  \n";
-    return bustGraphic;
+/**
+ * ASCII art of an ace of each suit in a row
+ *
+ * @return a string of ASCII art depicting 4 aces in a row
+ * */
+void GameComponents::cardsGraphic() {
+    std::cout << "     _____\n"
+                 "    |A .  | _____\n"
+                 "    | /.\\ ||A ^  | _____\n"
+                 "    |(_._)|| / \\ ||A _  | _____\n"
+                 "    |  |  || \\ / || ( ) ||A_ _ |\n"
+                 "    |____V||  .  ||(_'_)||( v )|\n"
+                 "           |____V||  |  || \\ / |\n"
+                 "                  |____V||  .  |\n"
+                 "                         |____V|\n\n";
 }
 
-std::string GameComponents::getCardsGraphic() {
-    return cardsGraphic;
+/**
+ *
+ *
+ * @return
+ * */
+void GameComponents::playerBlackjack(const Player &player) {
+    player.printHand();
+    std::cout << "************************************\n"
+                 "*             BLACKJACK            *\n"
+                 "************************************\n";
 }
 
-std::string GameComponents::getBlackjackGraphic() {
-    return blackjackGraphic;
+void GameComponents::dealerBlackjack(const Dealer &dealer) {
+    dealer.printHand();
+    std::cout << "************************************\n"
+                 "*             BLACKJACK            *\n"
+                 "************************************\n";
 }
 
 void GameComponents::gameIntro() {
@@ -68,7 +65,8 @@ void GameComponents::gameIntro() {
 
     std::cout << line << "|       Welcome to Blackjack!      |\n" << line;
 
-    std::cout << cardsGraphic;
+    cardsGraphic();
+    std::cout << "\n";
 }
 
 std::vector<Player> GameComponents::setupPlayers() {

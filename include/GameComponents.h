@@ -6,6 +6,7 @@
 #define BLACKJACK_GAMECOMPONENTS_H
 
 #include <vector>
+#include <sstream>
 #include "Player.h"
 #include "Deck.h"
 #include "Dealer.h"
@@ -13,18 +14,15 @@
 class GameComponents {
 public:
     GameComponents();
-    void gameIntro();
-    std::vector<Player> setupPlayers();
-    Deck setupDeck();
-    Dealer setupDealer();
-    std::vector<std::string> printHandHelper(const std::string &card, char delim);
-    std::string getBustGraphic(std::string name, int value);
-    std::string getCardsGraphic();
-    std::string getBlackjackGraphic();
-private:
-    std::string cardsGraphic;
-    std::string blackjackGraphic;
-    std::string stickGraphic;
+    static void gameIntro();
+    static std::vector<Player> setupPlayers();
+    static Deck setupDeck();
+    static Dealer setupDealer();
+    static std::vector<std::string> printHandHelper(const std::string &card, char delim);
+    static void bustGraphic(const std::string& name, int value);
+    static void cardsGraphic();
+    static void playerBlackjack(const Player& player);
+    static void dealerBlackjack(const Dealer& dealer);
 };
 
 #endif //BLACKJACK_GAMECOMPONENTS_H
