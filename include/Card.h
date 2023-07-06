@@ -97,23 +97,19 @@ public:
     };
 
     Card(Card::Suit suit, Card::Value value);
-    std::string getSuit() const;
-    std::string getValue() const;
+    [[nodiscard]] std::string getSuit() const;
+    [[nodiscard]] std::string getValue() const;
     void setDiamondAscii(int num);
     void setClubAscii(int num);
     void setSpadeAscii(int num);
     void setHeartAscii(int num);
-    std::string getAscii() const;
+    [[nodiscard]] std::string getAscii() const;
 private:
     friend std::ostream& operator<<(std::ostream& output, const Card& card);
     friend bool operator==(const Card& card1, const Card& card2);
     Value value;
     Suit suit;
     std::string asciiCard;
-    DiamondAscii diamondAscii;
-    SpadeAscii spadesAscii;
-    ClubAscii clubsAscii;
-    HeartAscii heartsAscii;
 };
 
 #endif //BLACKJACK_CARD_H
