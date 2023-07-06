@@ -9,14 +9,24 @@
 
 #include "../include/Card.h"
 
+/**
+ * Constructor for Card objects
+ *
+ * asciiCard is set during instantiation of the Deck
+ *
+ * @param suit suit of the card
+ * @param value value of the card
+ */
 Card::Card(Card::Suit suit, Card::Value value) {
     this->suit = suit;
     this->value = value;
+    asciiCard = "";
 }
 
 /**
- * Saves an ascii representation of a card belonging to the diamond suit
- * @param num value of the card
+ * Sets the asciiCard variable for cards belonging to the Diamond suit
+ *
+ * @param num the value of the card, determining which graphic it is assigned
  */
 void Card::setDiamondAscii(int num) {
     switch(num) {
@@ -129,6 +139,11 @@ void Card::setDiamondAscii(int num) {
     }
 }
 
+/**
+ * Sets the asciiCard variable for cards belonging to the Spade suit
+ *
+ * @param num the value of the card, determining which graphic it is assigned
+ */
 void Card::setSpadeAscii(int num) {
     switch(num) {
         case TWO_OF_SPADES:
@@ -241,8 +256,9 @@ void Card::setSpadeAscii(int num) {
 }
 
 /**
- * Saves an ascii representation of a card belonging to the club suit
- * @param num value of the card
+ * Sets the asciiCard variable for cards belonging to the Club suit
+ *
+ * @param num the value of the card, determining which graphic it is assigned
  */
 void Card::setClubAscii(int num) {
     switch(num) {
@@ -355,8 +371,9 @@ void Card::setClubAscii(int num) {
 }
 
 /**
- * Saves an ascii representation of a card belonging to the heart suit
- * @param num value of the card
+ * Sets the asciiCard variable for cards belonging to the Heart suit
+ *
+ * @param num the value of the card, determining which graphic it is assigned
  */
 void Card::setHeartAscii(int num) {
     switch(num) {
@@ -469,10 +486,20 @@ void Card::setHeartAscii(int num) {
     }
 }
 
+/**
+ * A getter for the asciiCard variable
+ *
+ * @return
+ */
 std::string Card::getAscii() const {
     return asciiCard;
 }
 
+/**
+ * A getter for the name of the suit enum
+ *
+ * @return a string representation of the cards suit
+ */
 std::string Card::getSuit() const {
     switch(suit) {
         case DIAMONDS:
@@ -489,6 +516,12 @@ std::string Card::getSuit() const {
     return "Error finding suit";
 }
 
+
+/**
+ * A getter for the name of the value enum
+ *
+ * @return a string representation of the cards value
+ */
 std::string Card::getValue() const {
     switch(value) {
         case TWO:
@@ -523,7 +556,14 @@ std::string Card::getValue() const {
     return "Error finding value";
 }
 
-// Overload << operator to print all details on one line
+/**
+ * Overloading operator `<<` to enable printing of suit and value easily
+ *
+ * @param output frame of sentence
+ * @param card card suit and value
+ *
+ * @return a string with the value and suit of the card
+ */
 std::ostream& operator<<(std::ostream& output, const Card& card) {
     std::string suit = card.getSuit();
     std::string value = card.getValue();
@@ -532,7 +572,14 @@ std::ostream& operator<<(std::ostream& output, const Card& card) {
     return output;
 }
 
-// Overload == operator to compare card suit and value
+/**
+ * Overloading operator `==` to enable easy comparison of cards
+ *
+ * @param card1 a card object
+ * @param card2 card to be compared with card1
+ *
+ * @return true if the cards are the same, else returns false
+ */
 bool operator==(const Card& card1, const Card& card2)  {
     bool compareValue = false;
     bool compareSuit = false;
