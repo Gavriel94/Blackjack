@@ -17,26 +17,6 @@ Dealer::Dealer() {
 }
 
 /**
- * Performs the first actions of a game
- * Dealer receives one card and each player gets two cards
- *
- * @param deck deck of cards used for the game
- * @param players a vector containing all players in the game
- */
-void Dealer::startGame(Deck &deck, std::vector<Player> &players) {
-    Card firstCard = deck.removeCard();
-    receiveCard(firstCard);
-
-    for(auto &player: players) {
-        Card card1 = deck.removeCard();
-        Card card2 = deck.removeCard();
-        // Each player starts with 2 cards
-        player.receiveCard(card1);
-        player.receiveCard(card2);
-    }
-}
-
-/**
  * A getter for the bust variable
  *
  * @return a bool saying if the dealer is bust or not
@@ -156,7 +136,7 @@ void Dealer::printHand() const{
     }
     std::cout << line;
     std::cout << "        Hand value: " << getHandValue() << "          \n";
-    std::cout << line;
+    std::cout << line << "\n";
 }
 
 void Dealer::startNewGame() {
