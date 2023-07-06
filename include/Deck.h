@@ -17,8 +17,6 @@ public:
     Card removeCard();
     void shuffle();
     std::vector<Card> getDeck();
-//    Functions for tests
-    void printDeck();
     int getSize();
 private:
     std::vector<Card> deck;
