@@ -27,18 +27,22 @@ void RunGame::initialiseGame() {
 }
 
 bool RunGame::gameLoop() {
-    dealer.startGame(deck, players);
-
-
+    // Dealer receives first card
+    Card card = deck.removeCard();
+    dealer.receiveCard(card);
     dealer.printHand();
-    std::cout << "\n";
 
     for(auto& player: players) {
+        // player receives 2 cards before they're given options to hit or stick
+        card = deck.removeCard();
+        player.receiveCard(card);
+        card = deck.removeCard();
+        player.receiveCard(card);
         while(player.getPlaying()) {
             player.printHand();
             bool hit = player.hitOrStick();
             if(hit) {
-                Card card = deck.removeCard();
+                card = deck.removeCard();
                 player.receiveCard(card);
                 if(player.isBust()) {
                     GameComponents::bustGraphic(player.getName(), player.getHandValue());
@@ -54,7 +58,7 @@ bool RunGame::gameLoop() {
     }
 
     while(dealer.getPlaying()) {
-        Card card = deck.removeCard();
+        card = deck.removeCard();
         dealer.receiveCard(card);
         dealer.printHand();
         if(dealer.getBust()) {
@@ -72,6 +76,8 @@ bool RunGame::gameLoop() {
         std::cout << player.getName() << " has " << player.getHandValue() << "\n";
     }
     std::cout << "Dealer has " << dealer.getHandValue() << "\n";
+
+    //checkWin() needs to be added here
 
     int choice = 0;
     while(choice < 1 || choice > 2) {
