@@ -15,13 +15,14 @@ class Dealer {
 public:
     Dealer();
     void startGame(Deck &deck, std::vector<Player> &players);
-    void receiveCard(Card card);
-    bool getBust();
+    void receiveCard(const Card& card);
+    bool getBust() const;
     std::vector<Card> getHand();
-    int getHandValue();
-    bool getPlaying();
-    void printHand();
-    bool getBlackjack();
+    int getHandValue() const;
+    bool getPlaying() const;
+    void printHand() const;
+    bool getBlackjack() const;
+    void startNewGame();
 private:
     std::vector<Card> hand;
     std::vector<std::string> handRepresentation;

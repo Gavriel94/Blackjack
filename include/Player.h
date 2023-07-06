@@ -12,18 +12,19 @@
 
 class Player {
 public:
-    Player(std::string name);
+    explicit Player(std::string name);
     int ace();
-    int getHandValue();
+    int getHandValue() const;
     std::vector<Card> getHand();
-    bool getBlackjack();
+    bool getBlackjack() const;
     void stick();
     bool hitOrStick();
-    bool getPlaying();
-    bool isBust();
+    bool getPlaying() const;
+    bool isBust() const;
     std::string getName();
-    void printHand();
-    void receiveCard(Card card);
+    void printHand() const;
+    void receiveCard(const Card& card);
+    void startNewGame();
 private:
     std::string name;
     std::vector<Card> hand;

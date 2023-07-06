@@ -13,16 +13,14 @@ Player::Player(std::string name) {
     blackjack = false;
 }
 
-void Player::receiveCard(Card card) {
+void Player::receiveCard(const Card& card) {
     handRepresentation.push_back(card.getAscii());
-    int value = 0;
     if(card.getValue() == "Ace") {
-        value = ace();
+        handValue += ace();
     } else {
-        value = stoi(card.getValue());
+        handValue += stoi(card.getValue());
     }
     hand.push_back(card);
-    handValue += value;
     if(handValue > 21) {
         bust = true;
         playing = false;
@@ -56,7 +54,7 @@ int Player::ace() {
     return 1;
 }
 
-int Player::getHandValue() {
+int Player::getHandValue() const {
     return handValue;
 }
 
@@ -85,17 +83,17 @@ bool Player::hitOrStick() {
             return true;
         case 2:
             playing = false;
-            return false;
+            return playing;
     }
 
     return false;
 }
 
-bool Player::getPlaying() {
+bool Player::getPlaying() const {
     return playing;
 }
 
-bool Player::isBust() {
+bool Player::isBust() const {
     return bust;
 }
 
@@ -103,22 +101,23 @@ std::string Player::getName() {
     return name;
 }
 
-bool Player::getBlackjack() {
+bool Player::getBlackjack() const {
     return blackjack;
 }
 
-void Player::printHand() {
+void Player::printHand() const {
     std::string line = "*----------------------------------*\n";
+
+
 
     std::cout << line;
     std::cout << "           " << name << "'s  Cards          \n";
     std::cout << line;
 
-    GameComponents gameComponents = GameComponents();
-
     std::vector<std::vector<std::string>> cardLines;
+    cardLines.reserve(hand.size());
     for (const auto &card: hand) {
-        cardLines.push_back(gameComponents.printHandHelper(card.getAscii(), '\n'));
+        cardLines.push_back(GameComponents::printHandHelper(card.getAscii(), '\n'));
     }
 
     for(size_t i = 0; i < cardLines[0].size(); ++i) {
@@ -133,10 +132,19 @@ void Player::printHand() {
     std::cout << line;
 }
 
+
 void Player::stick() {
     std::string line = "*----------------------------------*\n";
 
     std::cout << line;
     std::cout << "           " << name << " sticks with " << handValue << "             \n";
     std::cout << line;
+}
+
+void Player::startNewGame() {
+    handValue = 0;
+    playing = true;
+    bust = false;
+    blackjack = false;
+    hand = {};
 }
