@@ -129,7 +129,7 @@ void Player::printHand() const {
 
     std::cout << line;
     std::cout << "          Hand value: " << getHandValue() << "          \n";
-    std::cout << line;
+    std::cout << line << "\n";
 }
 
 
