@@ -14,11 +14,11 @@
 class Dealer {
 public:
     Dealer();
-    void startGame(Deck &deck, std::vector<Player> &players);
     void receiveCard(const Card& card);
     bool getBust() const;
     std::vector<Card> getHand();
     int getHandValue() const;
+    size_t getHandSize() const;
     bool getPlaying() const;
     void printHand() const;
     bool getBlackjack() const;

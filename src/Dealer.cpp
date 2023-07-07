@@ -146,3 +146,7 @@ void Dealer::startNewGame() {
     blackjack = false;
     hand = {};
 }
+
+size_t Dealer::getHandSize() const {
+    return hand.size();
+}
