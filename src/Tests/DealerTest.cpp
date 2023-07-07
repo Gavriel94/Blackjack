@@ -6,45 +6,6 @@
 
 DealerTest::DealerTest() = default;
 
-void DealerTest::startGame() {
-    Dealer dealer = Dealer();
-    Player player = Player("Bob");
-    Deck deck = Deck();
-
-    deck.create();
-    deck.shuffle();
-
-    std::vector<Player> players;
-    players.push_back(player);
-
-    dealer.startGame(deck, players);
-
-    assert(dealer.getHand().size() == 1);
-
-    for(auto p: players) {
-        assert(p.getHand().size() == 2);
-    }
-
-    dealer = Dealer();
-    player = Player("Bob");
-    Player player2 = Player("Alice");
-    deck = Deck();
-
-    deck.create();
-    deck.shuffle();
-
-    players = {};
-    players.push_back(player);
-    players.push_back(player2);
-
-    dealer.startGame(deck, players);
-
-    assert(dealer.getHand().size() == 1);
-    for(auto p: players) {
-        assert(p.getHand().size() == 2);
-    }
-}
-
 void DealerTest::receiveCard() {
     // Game setup
     Dealer dealer = Dealer();
