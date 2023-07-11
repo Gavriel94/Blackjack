@@ -9,6 +9,10 @@
  */
 GameComponents::GameComponents() = default;
 
+void GameComponents::displayRules() {
+    std::cout << "rules here";
+}
+
 /**
  * ASCII art of an explosion representing `bust` which includes the players name and hand value
  *
@@ -91,7 +95,7 @@ std::vector<Player> GameComponents::setupPlayers() {
         std::cout << "Enter player " << i+1 << "'s name (up to 7 characters):\n";
         std::string name;
         std::cin >> name;
-        Player player = Player(name.substr(0, 7));
+        Player player = Player(name.substr(0, 7), i);
         players.push_back(player);
         std::cout << "\n";
     }
