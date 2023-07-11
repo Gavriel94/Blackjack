@@ -9,13 +9,14 @@
 
 class GameComponentsTest {
 public:
-    GameComponentsTest();
     static void setupPlayers();
     static void setupDeck();
     static void setupDealer();
     static void printHandHelper();
     static void playerBlackjack();
     static void dealerBlackjack();
+private:
+    GameComponentsTest(); // prevents instance of class
 };
 
 #endif //BLACKJACK_GAMECOMPONENTSTEST_H
