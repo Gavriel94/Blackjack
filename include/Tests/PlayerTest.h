@@ -9,11 +9,16 @@
 
 class PlayerTest {
 public:
-    PlayerTest();
-    static void getName();
     static void ace();
     static void receiveCard();
-    static void isBust();
+    static void getBust();
+    static void printHand();
+    static void makeBet();
+    static void receiveWinnings();
+    static void hitOrStick();
+
+private:
+    PlayerTest(); // prevents instance of class
 };
 
 #endif //BLACKJACK_PLAYERTEST_H
