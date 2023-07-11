@@ -10,8 +10,8 @@ void DealerTest::receiveCard() {
     // Game setup
     Dealer dealer = Dealer();
     Deck deck = Deck();
-    Player player1 = Player("Bob");
-    Player player2 = Player("Alice");
+    Player player1 = Player("Bob", 1);
+    Player player2 = Player("Alice", 2);
 
     std::vector<Player> players;
     players.push_back(player1);
@@ -28,7 +28,7 @@ void DealerTest::receiveCard() {
 void DealerTest::handValue() {
     Dealer dealer = Dealer();
     Deck deck = Deck();
-    Player player1 = Player("Bob");
+    Player player1 = Player("Bob", 1);
     std::vector<Player> players;
     players.push_back(player1);
 
