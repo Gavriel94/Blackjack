@@ -9,10 +9,11 @@
 
 class DeckTest {
 public:
-    DeckTest();
     static void create();
     static void shuffle();
     static void removeCard();
+private:
+    DeckTest(); // prevents instance of class
 };
 
 #endif //BLACKJACK_DECKTEST_H
