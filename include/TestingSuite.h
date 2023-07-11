@@ -11,6 +11,7 @@
 #include "Tests/DeckTest.h"
 #include "Tests/GameComponentsTest.h"
 #include "Tests/PlayerTest.h"
+#include "Tests/RunGameTest.h"
 
 
 class TestingSuite {
@@ -23,6 +24,7 @@ private:
     void playerTests();
     void dealerTests();
     void gameComponentsTests();
+    void runGameTests();
     void allTests();
     bool testMenu();
     std::string lineDecorator;

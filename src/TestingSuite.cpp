@@ -17,13 +17,14 @@ bool TestingSuite::testMenu() {
         std::cout << "3 - Player Class\n";
         std::cout << "4 - Dealer Class\n";
         std::cout << "5 - GameComponents Class\n";
-        std::cout << "6 - Test all classes\n";
-        std::cout << "7 - Exit test mode\n";
+        std::cout << "6 - RunGame Class\n";
+        std::cout << "7 - Test all classes\n";
+        std::cout << "8 - Exit test mode\n";
         std::cin >> choice;
         if(std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        } else if(choice < 1 || choice > 7) {
+        } else if(choice < 1 || choice > 8) {
             std::cout << "Invalid input.\n\n";
         } else {
             break;
@@ -47,9 +48,12 @@ bool TestingSuite::testMenu() {
             gameComponentsTests();
             return true;
         case 6:
-            allTests();
+            runGameTests();
             return true;
         case 7:
+            allTests();
+            return true;
+        case 8:
             return false;
     }
     return false;
@@ -106,10 +110,13 @@ void TestingSuite::playerTests() {
     std::string  className = "Player";
     classTestHeader(className);
 
-    callClassTest([&]() { PlayerTest::getName(); }, "getName()");
     callClassTest([&]() { PlayerTest::ace(); }, "ace()");
     callClassTest([&]() { PlayerTest::receiveCard(); }, "receiveCard()");
-    callClassTest([&]() { PlayerTest::isBust(); }, "isBust()");
+    callClassTest([&]() { PlayerTest::getBust(); }, "isBust()");
+    callClassTest([&]() { PlayerTest::printHand(); }, "printHand()");
+    callClassTest([&]() { PlayerTest::makeBet(); }, "makeBet()");
+    callClassTest([&]() { PlayerTest::receiveWinnings(); }, "receiveWinnings()");
+    callClassTest([&]() { PlayerTest::hitOrStick(); }, "hitOrStick()");
 
     classTestFooter(className);
 }
@@ -118,7 +125,6 @@ void TestingSuite::dealerTests() {
     std::string className = "Dealer";
     classTestHeader(className);
 
-    callClassTest([&]() { DealerTest::startGame(); }, "startGame()");
     callClassTest([&]() { DealerTest::receiveCard(); }, "receiveCard()");
     callClassTest([&]() { DealerTest::handValue(); }, "getHandValue()");
     callClassTest([&]() { DealerTest::blackjack(); }, "blackjack()");
@@ -136,6 +142,16 @@ void TestingSuite::gameComponentsTests() {
     callClassTest([&]() { GameComponentsTest::setupDeck(); }, "setupDeck()");
     callClassTest([&]() { GameComponentsTest::setupDealer(); }, "setupDealer()");
     callClassTest([&]() { GameComponentsTest::printHandHelper(); }, "printHandHelper()");
+
+    classTestFooter(className);
+}
+
+void TestingSuite::runGameTests() {
+    std::string className = "RunGame";
+    classTestHeader(className);
+
+    callClassTest([&]() { RunGameTest::gameLoop(); }, "gameLoop()");
+    callClassTest([&]() { RunGameTest::blackjackCheck(); }, "blackjackCheck()");
 
     classTestFooter(className);
 }
