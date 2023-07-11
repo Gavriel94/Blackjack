@@ -10,14 +10,14 @@
 
 class DealerTest {
 public:
-    DealerTest();
     static void startGame();
     static void receiveCard();
     static void handValue();
     static void blackjack();
     static void bust();
     static void stick();
-
+private:
+    DealerTest(); // prevents instance of class
 };
 
 #endif //BLACKJACK_DEALERTEST_H
