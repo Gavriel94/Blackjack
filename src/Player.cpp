@@ -5,12 +5,15 @@
 #include "../include/Player.h"
 #include "../include/GameComponents.h"
 
-Player::Player(std::string name) {
-    this -> name = std::move(name);
+Player::Player(std::string name, int playerID) {
+    this->playerID = playerID;
+    this->name = std::move(name);
     handValue = 0;
     playing = true;
     bust = false;
     blackjack = false;
+    cash = 50;
+    bet = 0;
 }
 
 void Player::receiveCard(const Card& card) {
@@ -37,6 +40,7 @@ int Player::ace() {
         std::cout << name << ", would you like the Ace to be a 1 or 11?\n";
         std::cout << "Type '1' or '11' and press enter.\n";
         std::cin >> choice;
+        std::cout << "\n";
         if(std::cin.fail()) {
             std::cin.clear(); // clear fail state
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -93,11 +97,11 @@ bool Player::getPlaying() const {
     return playing;
 }
 
-bool Player::isBust() const {
+bool Player::getBust() const {
     return bust;
 }
 
-std::string Player::getName() {
+std::string Player::getName() const {
     return name;
 }
 
@@ -147,4 +151,67 @@ void Player::startNewGame() {
     bust = false;
     blackjack = false;
     hand = {};
+}
+
+size_t Player::getHandSize() const {
+    return hand.size();
+}
+
+float Player::getCash() const {
+    return cash;
+}
+
+float Player::getBet() const {
+    return bet;
+}
+
+void Player::makeBet() {
+    bet = 0;
+    while(bet < 5 || bet > cash) {
+        std::cout << name << "'s current cash: $" << cash << "\n";
+        std::cout << "Min bet: $5\n";
+        std::cout << "Enter your bet, (you can enter whole numbers or decimals):\n$";
+        std::cin >> bet;
+        if(std::cin.fail()) {
+            std::cin.clear(); // clear fail state
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else if(bet < 5) {
+            std::cout << "\nBet was too low. It must be at least $5.\n\n";
+        } else if(bet > cash) {
+            std::cout << "\nYou don't have that much cash!\n"
+                         "You bet $" << bet << " but have $" << cash << "\n\n";
+        } else {
+            break;
+        }
+    }
+    std::cout << "\n";
+}
+
+int Player::getPlayerID() const {
+    return playerID;
+}
+bool operator==(const Player& player1, const Player& player2)  {
+    return player1.getPlayerID() == player2.getPlayerID();
+}
+
+void Player::receiveWinnings() {
+    std::cout << "\n";
+    if(blackjack) {
+        // player wins bet back plus 1.5 times the amount
+        float betPlusBlackjackWin = bet + (1.5 * bet);
+        cash += betPlusBlackjackWin;
+
+        std::cout << name << " receives $" << betPlusBlackjackWin << "\n";
+        std::cout << name << "'s cash $" << cash << "\n\n";
+    } else {
+        // player wins bet back plus the same amount
+        float betPlusWin = bet + bet;
+        cash += betPlusWin;
+        std::cout << name << " receives $" << betPlusWin << "\n";
+        std::cout << "Current cash $" << cash << "\n\n";
+    }
+}
+
+void Player::loseBet() {
+    cash -= bet;
 }

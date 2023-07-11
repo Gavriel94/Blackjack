@@ -12,20 +12,28 @@
 
 class Player {
 public:
-    explicit Player(std::string name);
+    Player(std::string name, int playerID);
+    std::string getName() const;
     int ace();
+    void receiveCard(const Card& card);
+    bool getBust() const;
     int getHandValue() const;
+    size_t getHandSize() const;
     std::vector<Card> getHand();
     bool getBlackjack() const;
     void stick();
     bool hitOrStick();
     bool getPlaying() const;
-    bool isBust() const;
-    std::string getName();
     void printHand() const;
-    void receiveCard(const Card& card);
     void startNewGame();
+    float getCash() const;
+    float getBet() const;
+    void makeBet();
+    int getPlayerID() const;
+    void receiveWinnings();
+    void loseBet();
 private:
+    int playerID;
     std::string name;
     std::vector<Card> hand;
     std::vector<std::string> handRepresentation;
@@ -33,6 +41,9 @@ private:
     bool bust;
     bool blackjack;
     int handValue;
+    float cash;
+    float bet;
+    friend bool operator==(const Player& player1, const Player& player2);
 };
 
 #endif //BLACKJACK_PLAYER_H
