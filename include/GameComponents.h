@@ -23,6 +23,7 @@ public:
     static void cardsGraphic();
     static void playerBlackjack(const Player& player);
     static void dealerBlackjack(const Dealer& dealer);
+    static void displayRules();
 };
 
 #endif //BLACKJACK_GAMECOMPONENTS_H
