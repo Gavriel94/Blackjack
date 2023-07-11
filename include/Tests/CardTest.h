@@ -10,10 +10,11 @@
 
 class CardTest {
 public:
-    CardTest();
     static void getSuit();
     static void getValue();
     static void setAscii();
+private:
+    CardTest(); // prevents instance of class
 };
 
 #endif //BLACKJACK_CARDTEST_H
