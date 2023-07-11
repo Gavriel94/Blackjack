@@ -10,7 +10,7 @@ void GameComponentsTest::setupPlayers() {
     GameComponents gameComponents = GameComponents();
 
     std::cout << "assert(players.at(0).getName() == \"Bob\")\n\n";
-    std::vector<Player> players = gameComponents.setupPlayers();
+    std::vector<Player> players = GameComponents::setupPlayers();
     assert(players.at(0).getName() == "Bob");
 
     players = {};
@@ -19,7 +19,7 @@ void GameComponentsTest::setupPlayers() {
     std::cout << "assert(players.at(1).getName() == \"Alice\")\n";
     std::cout << "assert(players.at(2).getName() == \"Terry\")\n\n";
 
-    players = gameComponents.setupPlayers();
+    players = GameComponents::setupPlayers();
     assert(players.at(0).getName() == "Bob");
     assert(players.at(1).getName() == "Alice");
     assert(players.at(2).getName() == "Terry");
@@ -28,7 +28,7 @@ void GameComponentsTest::setupPlayers() {
 void GameComponentsTest::setupDeck() {
     GameComponents gameComponents = GameComponents();
 
-    Deck deck = gameComponents.setupDeck();
+    Deck deck = GameComponents::setupDeck();
     Deck freshDeck = Deck();
     freshDeck.create();
 
@@ -39,7 +39,7 @@ void GameComponentsTest::setupDeck() {
 
 void GameComponentsTest::setupDealer() {
     GameComponents gameComponents = GameComponents();
-    Dealer dealer = gameComponents.setupDealer();
+    Dealer dealer = GameComponents::setupDealer();
 
     assert(dealer.getPlaying() == true);
 }
