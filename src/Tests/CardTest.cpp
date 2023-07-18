@@ -44,3 +44,16 @@ void CardTest::getValue() {
         assert(Card(defaultSuit, valueArray[i]).getValue() == valueStringArray[i]);
     }
 }
+
+void CardTest::ascii() {
+    Card card = Card(Card::DIAMONDS, Card::TWO);
+    std::cout << "2 of Diamonds\n\n";
+    card.setDiamondAscii(2);
+    std::cout << card.getAscii() << "\n\n";
+
+    std::cout << "Ace of Spades\n\n";
+    card = Card(Card::SPADES, Card::ACE);
+    card.setSpadeAscii(14);
+    std::cout << card.getAscii() << "\n\n";
+
+}

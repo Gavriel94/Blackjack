@@ -12,7 +12,7 @@ class CardTest {
 public:
     static void getSuit();
     static void getValue();
-    static void setAscii();
+    static void ascii();
 private:
     CardTest(); // prevents instance of class
 };
