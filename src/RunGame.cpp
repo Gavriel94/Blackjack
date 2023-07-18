@@ -1,19 +1,29 @@
-//
-// Created by Anthony Gavriel on 06/07/2023.
-//
+/**
+ * @file RunGame.cpp
+ * @brief The implementation of the RunGame class and its functions.
+ * @author Anthony Gavriel
+ * @date 06/07/2023
+ */
 
 #include "../include/RunGame.h"
 
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
 RunGame::RunGame() {
     dealer = GameComponents::setupDealer();
     deck = GameComponents::setupDeck();
     players = {};
 }
 
-void RunGame::initialiseGame() {
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+void RunGame::runGame() {
     GameComponents::gameIntro();
     players = GameComponents::setupPlayers();
 
+    /** Displays names entered via input back at the user to confirm correct entry. */
     std::cout << "Seated at the table we have:\n\n";
     for(const auto& player : players) {
         std::cout << "- " << player.getName() << "\n";
@@ -21,84 +31,82 @@ void RunGame::initialiseGame() {
 
     bool playersPlaying = true;
     while(playersPlaying) {
-        playersPlaying = gameLoop();
+        gameLoop();
+        if(players.empty()) {
+            std::cout << "Players have run out of cash!\nThe casino wins!\n";
+            playersPlaying = false;
+        } else {
+            playersPlaying = keepPlaying();
+        }
     }
     std::cout << "\nThanks for playing!\n\n";
 }
 
-bool RunGame::blackjackCheck(Player& player) {
-    bool playerBlackjack = player.getBlackjack();
-    bool dealerBlackjack = dealer.getBlackjack();
-
-    if(dealerBlackjack) {
-        if(playerBlackjack) {
-            // dealer and player have blackjack
-            std::cout << "Tie between " << player.getName() << " and Dealer.\n\n";
-            return false;
-        } else {
-            std::cout << player.getName() << " loses!\n\n";
-            player.loseBet();
-            checkIfPlayerOut(player);
-            return true;
-        }
-    }
-    if(playerBlackjack) {
-        // player has blackjack, dealer does not
-        std::cout << player.getName() << " wins with Blackjack!\n\n";
-        player.receiveWinnings();
-        return true;
-    }
-    return false;
-}
-
-void RunGame::valueCheck(Player& player) {
-    std::string name = player.getName();
-    if(player.getHandValue() > dealer.getHandValue()) {
-        std::cout << name << " wins!\n";
-        player.receiveWinnings();
-    }
-    if(player.getHandValue() == dealer.getHandValue()) {
-        std::cout << name << " ties with dealer!\n";
-    }
-    if(player.getHandValue() < dealer.getHandValue()) {
-        std::cout << name << " loses!\n\n";
-        player.loseBet();
-        checkIfPlayerOut(player);
-    }
-}
-
-void RunGame::checkWin() {
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+void RunGame::calculateTurnResult() {
     for(auto& player : players) {
-        // if players aren't bust
         if(!player.getBust()) {
+            /** For each player who is not bust, */
             if(dealer.getBust()) {
-                //if dealer is bust player wins
+                /** Player wins if dealer is bust. */
                 std::cout << player.getName() << " wins!\n";
-                player.receiveWinnings();
+                player.win();
             } else {
-                //check for blackjack wins
+                /** Check for end-game by blackjack. */
                 if(!blackjackCheck(player)) {
-                    //check for wins by value
+                    /** Check for end-game by hand value. */
                     valueCheck(player);
                 }
             }
         } else {
-            //player is bust so they lose
+            /** Bust players lose. */
             std::cout << player.getName() << " loses!\n";
-            player.loseBet();
-            //checks if player has run out of cash
+            player.lose();
+            /** Checks if losing player still has cash. */
             checkIfPlayerOut(player);
         }
     }
 }
 
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+void RunGame::gameLoop() {
+    /** Resets the deck */
+    deck = GameComponents::setupDeck();
+    deck.shuffle();
+
+    /** Player makes their bet before card are dealt. */
+    for(auto& player : players) {
+        player.makeBet();
+    }
+
+    /** Dealer receives the first card */
+    dealer.receiveCard(deck.removeCard());
+    dealer.printHand();
+
+    /** Each player has their turn */
+    for(auto& player: players) {
+        playerTurn(player);
+    }
+
+    /** The dealer has their turn and win/loss states are determined. */
+    dealerTurn();
+    printValues();
+    calculateTurnResult();
+}
+
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
 void RunGame::playerTurn(Player& player) {
-    // bets are made before receiving the cards
-    player.makeBet();
-    // player receives 2 cards before they're given options to hit or stick
+    /** Player receives two cards then decides to hit or stick. */
     player.receiveCard(deck.removeCard());
     player.receiveCard(deck.removeCard());
     player.printHand();
+
     while(player.getPlaying()) {
         bool hit = player.hitOrStick();
         if(hit) {
@@ -112,11 +120,14 @@ void RunGame::playerTurn(Player& player) {
                 break;
             }
         } else {
-            player.stick();
+            GameComponents::stickGraphic(player.getName(), player.getHandValue());
         }
     }
 }
 
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
 void RunGame::dealerTurn() {
     while(dealer.getPlaying()) {
         dealer.receiveCard(deck.removeCard());
@@ -130,34 +141,69 @@ void RunGame::dealerTurn() {
     }
 }
 
-bool RunGame::gameLoop() {
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+bool RunGame::blackjackCheck(Player& player) {
+    std::string name = player.getName();
+    bool playerBlackjack = player.getBlackjack();
+    bool dealerBlackjack = dealer.getBlackjack();
 
-    if(players.empty()) {
-        std::cout << "No more players, the casino wins!\n\n";
-        return false;
-    } else {
-        // Dealer receives first card
-        dealer.receiveCard(deck.removeCard());
-        dealer.printHand();
-
-        for(auto& player: players) {
-            playerTurn(player);
+    if(dealerBlackjack) {
+        if(playerBlackjack) {
+            /** Dealer and player have blackjack. */
+            std::cout << name << " ties with dealer!\n";
+            return true;
+        } else {
+            std::cout << "Dealer has Blackjack!\n";
+            std::cout << name << " loses!\n\n";
+            player.lose();
+            checkIfPlayerOut(player);
+            return true;
         }
-        dealerTurn();
-        printValues();
-        checkWin();
     }
-
-    return keepPlaying();
+    if(playerBlackjack) {
+        /** Player has blackjack and dealer does not */
+        std::cout << name << " wins with Blackjack!\n\n";
+        player.win();
+        return true;
+    }
+    return false;
 }
 
-void RunGame::printValues() {
-    for(auto& player: players) {
-        std::cout << player.getName() << " has " << player.getHandValue() << "\n";
+void RunGame::valueCheck(Player& player) {
+    std::string name = player.getName();
+    if(player.getHandValue() > dealer.getHandValue()) {
+        /** Player is closer to 21 than dealer */
+        std::cout << name << " wins!\n";
+        player.win();
     }
-    std::cout << "Dealer has " << dealer.getHandValue() << "\n\n";
+    if(player.getHandValue() == dealer.getHandValue()) {
+        /** Player and dealer have the same value */
+        std::cout << name << " ties with dealer!\n";
+    }
+    if(player.getHandValue() < dealer.getHandValue()) {
+        /** Dealer is closer to 21 than player */
+        std::cout << name << " loses!\n\n";
+        player.lose();
+        checkIfPlayerOut(player);
+    }
 }
 
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+void RunGame::checkIfPlayerOut(Player &player) {
+    if(player.getCash() <= 0) {
+        std::cout << player.getName() <<  " is out of cash!\n";
+        std::cout << "Good thing it's not real money..\n\n";
+        std::erase(players, player);
+    }
+}
+
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
 bool RunGame::keepPlaying() {
     int choice = 0;
     while(choice < 1 || choice > 2) {
@@ -166,8 +212,8 @@ bool RunGame::keepPlaying() {
         std::cin >> choice;
         std::cout << "\n";
         if(std::cin.fail()) {
-            std::cin.clear(); // clear fail state
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.clear(); /** Clear fail state. */
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); /** Ignore the bad input. */
         } else if(choice < 1 || choice > 2) {
             std::cout << "Invalid input.\n"
                          "Type 1 to keep playing or 2 to exit game:\n\n";
@@ -176,6 +222,7 @@ bool RunGame::keepPlaying() {
         }
     }
     if(choice == 1) {
+        /** Resets all game attributes to default state. */
         deck = GameComponents::setupDeck();
         for(auto& player : players) {
             player.startNewGame();
@@ -186,10 +233,12 @@ bool RunGame::keepPlaying() {
     return false;
 }
 
-void RunGame::checkIfPlayerOut(Player &player) {
-    if(player.getCash() <= 0) {
-        std::cout << player.getName() <<  " is out of cash!\n";
-        std::cout << "Good thing it's not real money..\n\n";
-        std::erase(players, player);
+/**
+ * @brief See declaration in RunGame.h for details.
+ */
+void RunGame::printValues() {
+    for(auto& player: players) {
+        std::cout << player.getName() << " has " << player.getHandValue() << "\n";
     }
+    std::cout << "Dealer has " << dealer.getHandValue() << "\n\n";
 }
