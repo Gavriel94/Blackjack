@@ -7,41 +7,23 @@
 DealerTest::DealerTest() = default;
 
 void DealerTest::receiveCard() {
-    // Game setup
     Dealer dealer = Dealer();
-    Deck deck = Deck();
-    Player player1 = Player("Bob", 1);
-    Player player2 = Player("Alice", 2);
-
-    std::vector<Player> players;
-    players.push_back(player1);
-    players.push_back(player2);
-
-    deck.create();
-
-    Card card = deck.getDeck().at(deck.getDeck().size() -1);
-    Card c = deck.removeCard();
-    dealer.receiveCard(c);
+    Card card = Card(Card::CLUBS, Card::EIGHT);
+    dealer.receiveCard(card);
     assert(dealer.getHand().at(0) == card);
 }
 
 void DealerTest::handValue() {
     Dealer dealer = Dealer();
     Deck deck = Deck();
-    Player player1 = Player("Bob", 1);
-    std::vector<Player> players;
-    players.push_back(player1);
-
-    deck.create();
-    deck.shuffle();
 
     Card c = deck.removeCard();
     dealer.receiveCard(c);
 
-    if (c.getSuit() == "Ace") {
+    if(c.getValue() == "Ace") {
         assert(dealer.getHandValue() == 11);
     } else {
-        assert(dealer.getHandValue() == stoi(c.getValue()));
+        assert(dealer.getHandValue() == std::stoi(c.getValue()));
     }
 }
 
@@ -55,7 +37,7 @@ void DealerTest::blackjack() {
     dealer.receiveCard(king);
 
     assert(dealer.getBlackjack() == true);
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 
 void DealerTest::bust() {
@@ -70,7 +52,7 @@ void DealerTest::bust() {
     dealer.receiveCard(king);
 
     assert(dealer.getBust() == true);
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 
 void DealerTest::stick() {
@@ -87,5 +69,5 @@ void DealerTest::stick() {
     assert(dealer.getBust() == false);
     assert(dealer.getPlaying() == false);
     assert(dealer.getHandValue() == 17);
-    std::cout << "\n";
+    std::cout << "\n\n";
 }

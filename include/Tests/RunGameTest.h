@@ -12,11 +12,25 @@
 
 class RunGameTest {
 public:
-        static void gameLoop();
-        static void initialiseGame();
+        static void blackjackTie();
+        static void blackjackWin();
+        static void blackjackLoss();
+        static void valueTie();
+        static void valueWin();
+        static void valueLoss();
+        static void playerTurn();
+        static void dealerTurn();
+        static void keepPlaying();
+        static void stopPlaying();
+        static void playerIsBust();
+        static void dealerIsBust();
+        static void playerHasBlackjack();
+        static void dealerHasBlackjack();
+        static void bothHaveBlackjack();
+        static void playerHigherValue();
+        static void dealerHigherValue();
+        static void bothSameValue();
         static void checkWin();
-        static void blackjackCheck();
-        static void valueCheck();
 private:
     RunGameTest(); // prevents instance of class
 };

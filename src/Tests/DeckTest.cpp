@@ -8,7 +8,6 @@ DeckTest::DeckTest() = default;
 
 void DeckTest::create() {
     Deck deck = Deck();
-    deck.create();
 
     std::vector<Card> cards;
 
@@ -26,18 +25,16 @@ void DeckTest::create() {
 
 void DeckTest::shuffle() {
     Deck shuffledDeck = Deck();
-    shuffledDeck.create();
+    Deck deck = Deck();
+
     shuffledDeck.shuffle();
 
-    Deck plainDeck = Deck();
-
-    assert(plainDeck.getDeck() != shuffledDeck.getDeck());
+    assert(shuffledDeck != deck);
 }
 
 void DeckTest::removeCard() {
     Deck deck = Deck();
 
-    deck.create();
     Card bottomCard = deck.getDeck().at(deck.getDeck().size()-1);
     Card removedCard = deck.removeCard();
 

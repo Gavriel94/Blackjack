@@ -10,7 +10,6 @@
 
 class DealerTest {
 public:
-    static void startGame();
     static void receiveCard();
     static void handValue();
     static void blackjack();

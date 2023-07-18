@@ -6,39 +6,32 @@
 
 GameComponentsTest::GameComponentsTest() = default;
 
-void GameComponentsTest::setupPlayers() {
-    GameComponents gameComponents = GameComponents();
-
-    std::cout << "assert(players.at(0).getName() == \"Bob\")\n\n";
+void GameComponentsTest::setupOnePlayer() {
     std::vector<Player> players = GameComponents::setupPlayers();
+
     assert(players.at(0).getName() == "Bob");
+}
 
-    players = {};
+void GameComponentsTest::setupThreePlayers() {
+    std::vector<Player> players = GameComponents::setupPlayers();
 
-    std::cout << "assert(players.at(0).getName() == \"Bob\")\n";
-    std::cout << "assert(players.at(1).getName() == \"Alice\")\n";
-    std::cout << "assert(players.at(2).getName() == \"Terry\")\n\n";
-
-    players = GameComponents::setupPlayers();
     assert(players.at(0).getName() == "Bob");
     assert(players.at(1).getName() == "Alice");
     assert(players.at(2).getName() == "Terry");
 }
 
 void GameComponentsTest::setupDeck() {
-    GameComponents gameComponents = GameComponents();
+    Deck deckStatic = GameComponents::setupDeck();
+    Deck deckInstance = Deck();
 
-    Deck deck = GameComponents::setupDeck();
-    Deck freshDeck = Deck();
-    freshDeck.create();
+    assert(deckStatic.getSize() == deckInstance.getSize());
+    assert(deckStatic.getDeck() == deckInstance.getDeck());
 
-    // game components deck should be shuffled
-    assert(deck.getDeck() != freshDeck.getDeck());
-    assert(deck.getSize() == 52);
+    deckStatic.shuffle();
+    assert(deckStatic.getDeck() != deckInstance.getDeck());
 }
 
 void GameComponentsTest::setupDealer() {
-    GameComponents gameComponents = GameComponents();
     Dealer dealer = GameComponents::setupDealer();
 
     assert(dealer.getPlaying() == true);

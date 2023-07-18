@@ -9,13 +9,18 @@
 
 class PlayerTest {
 public:
-    static void ace();
+    static void aceIsOne();
+    static void aceIsEleven();
     static void receiveCard();
+    static void getHandValue();
     static void getBust();
     static void printHand();
     static void makeBet();
-    static void receiveWinnings();
-    static void hitOrStick();
+    static void blackjackWin();
+    static void standardWin();
+    static void hit();
+    static void stick();
+    static void comparePlayers();
 
 private:
     PlayerTest(); // prevents instance of class
