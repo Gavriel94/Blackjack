@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
     }
     else {
         RunGame game = RunGame();
-        game.initialiseGame();
+        game.runGame();
     }
     return 0;
 }
