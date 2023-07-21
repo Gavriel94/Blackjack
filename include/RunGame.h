@@ -45,9 +45,9 @@ public:
      * @brief Determines the win/loss status of each player and the dealer at the end of a game.
      *
      * Iterates through each player and determines if they should receive winnings or lose their bet.
-     * This function checks if the dealer and which, if any, players are bust.
-     * If the dealer is bust, all players who aren't bust receive winnings.
-     * If the dealer is not bust, any players who are instantly lose their bet.
+     * This function checks if the dealer and which, if any, players are getBust.
+     * If the dealer is bust, all players who aren't getBust receive winnings.
+     * If the dealer is not getBust, any players who are instantly lose their bet.
      *
      * Comparisons are made between the dealer and any remaining players.
      * The blackjack status of both the dealer and players is checked.
@@ -78,8 +78,8 @@ private:
     /**
      * @brief Executes a players turn of the game
      *
-     * This is where the player makes their bet, chooses when to hit or stick.
-     * The player hits until they're either bust or choose to stick.
+     * This is where the player makes their bet, chooses when to hit or getStick.
+     * The player hits until they're either getBust or choose to getStick.
      * If the player has blackjack their turn is over, they cannot choose to take another card on top.
      *
      * @param player The player whose turn it is.
@@ -89,7 +89,7 @@ private:
     /**
      * @brief Executes the dealers turn of the game
      *
-     * Where the dealer receives cards until either they have blackjack, are bust or stick when `handValue` is =>17.
+     * Where the dealer receives cards until either they have blackjack, are getBust or getStick when `handValue` is =>17.
      */
     void dealerTurn();
 

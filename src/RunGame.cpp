@@ -48,9 +48,9 @@ void RunGame::runGame() {
 void RunGame::calculateTurnResult() {
     for(auto& player : players) {
         if(!player.getBust()) {
-            /** For each player who is not bust, */
+            /** For each player who is not getBust, */
             if(dealer.getBust()) {
-                /** Player wins if dealer is bust. */
+                /** Player wins if dealer is getBust. */
                 std::cout << player.getName() << " wins!\n";
                 player.win();
             } else {
@@ -102,7 +102,7 @@ void RunGame::gameLoop() {
  * @brief See declaration in RunGame.h for details.
  */
 void RunGame::playerTurn(Player& player) {
-    /** Player receives two cards then decides to hit or stick. */
+    /** Player receives two cards then decides to hit or getStick. */
     player.receiveCard(deck.removeCard());
     player.receiveCard(deck.removeCard());
     player.printHand();
