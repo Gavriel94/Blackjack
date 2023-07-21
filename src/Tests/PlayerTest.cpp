@@ -1,11 +1,20 @@
-//
-// Created by Anthony Gavriel on 06/07/2023.
-//
+/**
+ * @file PlayerTest.cpp
+ * @brief The implementation of the PlayerTest class and its functions.
+ * @author Anthony Gavriel
+ * @date 06/07/2023
+ */
 
 #include "../../include/Tests/PlayerTest.h"
 
+/**
+ * @brief Default constructor for PlayerTest.
+ */
 PlayerTest::PlayerTest() = default;
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::aceIsOne() {
     Player player = Player("Bob", 0);
 
@@ -14,6 +23,9 @@ void PlayerTest::aceIsOne() {
     assert(value == 1);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::aceIsEleven() {
     Player player = Player("Bob", 0);
 
@@ -22,6 +34,9 @@ void PlayerTest::aceIsEleven() {
     assert(value == 11);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::receiveCard() {
     Player player = Player("Bob", 0);
     Card card = Card(Card::CLUBS, Card::EIGHT);
@@ -30,6 +45,9 @@ void PlayerTest::receiveCard() {
     assert(player.getHand().at(0) == card);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::getHandValue() {
     Player player = Player("Bob", 0);
     Card card = Card(Card::CLUBS, Card::EIGHT);
@@ -38,8 +56,9 @@ void PlayerTest::getHandValue() {
     assert(player.getHandValue() == 8);
 }
 
-
-
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::getBust() {
     Player player = Player("Bob", 0);
 
@@ -52,6 +71,9 @@ void PlayerTest::getBust() {
     assert(player.getBust() == true);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::printHand() {
     Player player = Player("Bob", 0);
     Deck deck = Deck();
@@ -61,6 +83,9 @@ void PlayerTest::printHand() {
     player.printHand();
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::makeBet() {
     Player player = Player("Bob", 0);
 
@@ -68,6 +93,9 @@ void PlayerTest::makeBet() {
     assert(player.getBet() != 0);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::blackjackWin() {
     Player player = Player("Bob", 0);
 
@@ -83,6 +111,9 @@ void PlayerTest::blackjackWin() {
     assert(player.getCash() == currentCash + winnings);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::standardWin() {
     Player player = Player("Bob", 0);
 
@@ -98,6 +129,9 @@ void PlayerTest::standardWin() {
     assert(player.getCash() == currentCash + winnings);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::hit() {
     Player player = Player("Bob", 0);
 
@@ -105,6 +139,9 @@ void PlayerTest::hit() {
     assert(player.getPlaying() == true);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::stick() {
     Player player = Player("Bob", 0);
 
@@ -112,6 +149,9 @@ void PlayerTest::stick() {
     assert(player.getPlaying() == false);
 }
 
+/**
+ * @brief See declaration in PlayerTest.h for details.
+ */
 void PlayerTest::comparePlayers() {
     Player player = Player("Bob", 0);
     Player playerClone = player;
