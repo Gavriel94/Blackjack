@@ -1,11 +1,21 @@
-//
-// Created by Anthony Gavriel on 06/07/2023.
-//
+/**
+ * @file DealerTest.cpp
+ * @brief The implementation of the DealerTest class and its functions.
+ * @author Anthony Gavriel
+ * @date 06/07/2023
+ */
+
 
 #include "../../include/Tests/DealerTest.h"
 
+/**
+ * @brief Default constructor for DealerTest.
+ */
 DealerTest::DealerTest() = default;
 
+/**
+ * @brief See declaration in DealerTest.h for details.
+ */
 void DealerTest::receiveCard() {
     Dealer dealer = Dealer();
     Card card = Card(Card::CLUBS, Card::EIGHT);
@@ -13,10 +23,14 @@ void DealerTest::receiveCard() {
     assert(dealer.getHand().at(0) == card);
 }
 
+/**
+ * @brief See declaration in DealerTest.h for details.
+ */
 void DealerTest::handValue() {
     Dealer dealer = Dealer();
     Deck deck = Deck();
 
+    deck.shuffle();
     Card c = deck.removeCard();
     dealer.receiveCard(c);
 
@@ -25,8 +39,16 @@ void DealerTest::handValue() {
     } else {
         assert(dealer.getHandValue() == std::stoi(c.getValue()));
     }
+
+    dealer = Dealer(); /** Reset dealer. */
+    dealer.receiveCard(Card(Card::HEARTS, Card::KING));
+    dealer.receiveCard(Card(Card::SPADES, Card::EIGHT));
+    assert(dealer.getHandValue() == 18);
 }
 
+/**
+ * @brief See declaration in DealerTest.h for details.
+ */
 void DealerTest::blackjack() {
     Dealer dealer = Dealer();
 
@@ -40,7 +62,10 @@ void DealerTest::blackjack() {
     std::cout << "\n\n";
 }
 
-void DealerTest::bust() {
+/**
+ * @brief See declaration in DealerTest.h for details.
+ */
+void DealerTest::getBust() {
     Dealer dealer = Dealer();
 
     Card seven = Card(Card::SPADES, Card::SEVEN);
@@ -55,7 +80,10 @@ void DealerTest::bust() {
     std::cout << "\n\n";
 }
 
-void DealerTest::stick() {
+/**
+ * @brief See declaration in DealerTest.h for details.
+ */
+void DealerTest::getStick() {
     Dealer dealer = Dealer();
 
     Card seven = Card(Card::SPADES, Card::SEVEN);
