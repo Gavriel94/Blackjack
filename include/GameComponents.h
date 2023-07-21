@@ -94,11 +94,11 @@ public:
     static void gameIntro();
 
     /**
-     * @brief ASCII art of an explosion to represent the player going "bust".
+     * @brief ASCII art of an explosion to represent the player going "getBust".
      *
      * Displays the player name and value of their hand.
      *
-     * @param name The name of the player who went bust.
+     * @param name The name of the player who went getBust.
      * @param value The value of their hand.
      */
     static void bustGraphic(const std::string& name, int value);
@@ -111,7 +111,7 @@ public:
     static void cardsGraphic();
 
     /**
-     * @brief Graphic showing the player has chosen to stick.
+     * @brief Graphic showing the player has chosen to getStick.
      *
      * Shows the value of the players hand and their name.
      *
