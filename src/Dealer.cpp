@@ -42,7 +42,7 @@ void Dealer::receiveCard(const Card& card) {
      */
     hand.push_back(card);
     if(handValue > 21) {
-        /** Dealer is bust. */
+        /** Dealer is getBust. */
         bust = true;
         playing = false;
     } else if(handValue == 21 && hand.size() == 2) {

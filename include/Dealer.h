@@ -37,7 +37,9 @@ public:
      * The dealer follows the same rules as in a casino:
      * - If their hand is worth 10 or less and they receive an Ace, the value added is 11.
      * - If their hand is worth more than 10 and they receive an Ace, the value added is 1.
-     * - If their hand is 17 or more, and they aren't bust, they stick.
+     * - If their hand is 17 or more, and they aren't getBust, they getStick.
+     *
+     * Updates the `handValue` attribute.
      *
      * @param card The card the dealer is receiving.
      */
@@ -50,7 +52,7 @@ public:
      * - hand
      * - handValue
      * - playing
-     * - bust
+     * - getBust
      * - blackjack
      *
      * This ensures all games are independent from previous ones.
@@ -92,9 +94,9 @@ public:
     bool getPlaying() const;
 
     /**
-     * @brief A getter for the `bust` variable.
+     * @brief A getter for the `getBust` variable.
      *
-     * @return True if the dealer is bust, otherwise false.
+     * @return True if the dealer is getBust, otherwise false.
      */
     bool getBust() const;
 
@@ -122,7 +124,7 @@ private:
     bool playing;
 
     /**
-     * @brief A variable indicating if the dealer is bust or not.
+     * @brief A variable indicating if the dealer is getBust or not.
      */
     bool bust;
 
