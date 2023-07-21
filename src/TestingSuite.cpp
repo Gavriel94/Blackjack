@@ -123,8 +123,8 @@ void TestingSuite::dealerTests() {
     callClassTest([&]() { DealerTest::receiveCard(); }, "receiveCard()", "");
     callClassTest([&]() { DealerTest::handValue(); }, "getHandValue()", "");
     callClassTest([&]() { DealerTest::blackjack(); }, "blackjack()", "");
-    callClassTest([&]() { DealerTest::bust(); }, "testBust()", "");
-    callClassTest([&]() { DealerTest::stick(); }, "testStick()", "");
+    callClassTest([&]() { DealerTest::getBust(); }, "testBust()", "");
+    callClassTest([&]() { DealerTest::getStick(); }, "testStick()", "");
 
     classTestFooter(className);
 }
@@ -174,7 +174,7 @@ void TestingSuite::playerTests() {
     callClassTest([&]() { PlayerTest::blackjackWin(); }, "blackjackWin()", "Ace must be 11.");
     callClassTest([&]() { PlayerTest::standardWin(); }, "standardWin()", "");
     callClassTest([&]() { PlayerTest::hit(); }, "hit()", "Select `hit`.");
-    callClassTest([&]() { PlayerTest::stick(); }, "stick()", "Select `stick`.");
+    callClassTest([&]() { PlayerTest::stick(); }, "getStick()", "Select `getStick`.");
     callClassTest([&]() { PlayerTest::comparePlayers(); }, "comparePlayers()", "");
 
     classTestFooter(className);
@@ -191,12 +191,8 @@ void TestingSuite::runGameTests() {
     callClassTest([&]() { RunGameTest::blackjackWin(); }, "blackjackWin()", "Ace must be 11.\nEnsure the message: \"Bob wins with Blackjack!\" is displayed.");
     callClassTest([&]() { RunGameTest::blackjackLoss(); }, "blackjackLoss()", "Ensure the message: \"Bob loses!\" is displayed.");
     callClassTest([&]() { RunGameTest::valueTie(); }, "valueTie()", "Ensure the message: \"Bob ties with dealer!\" is displayed.");
-    callClassTest([&]() { RunGameTest::valueWin(); }, "valueWin()", "Ensure the message: \"Bob wins!.\" is displayed.");
-    callClassTest([&]() { RunGameTest::valueLoss(); }, "valueLoss()", "Ensure the message: \"Bob loses!.\" is displayed.");
-    callClassTest([&]() { RunGameTest::playerTurn(); }, "playerTurn()", "No actions required. Just observe the outcome.");
-    callClassTest([&]() { RunGameTest::dealerTurn(); }, "dealerTurn()", "No actions required. Just observe the outcome.");
-    callClassTest([&]() { RunGameTest::keepPlaying(); }, "keepPlaying()", "Select the option to keep playing.");
-    callClassTest([&]() { RunGameTest::stopPlaying(); }, "stopPlaying()", "Select the option to stop playing.");
+    callClassTest([&]() { RunGameTest::valueWin(); }, "valueWin()", "Ensure the message: \"Bob wins!\" is displayed.");
+    callClassTest([&]() { RunGameTest::valueLoss(); }, "valueLoss()", "Ensure the message: \"Bob loses!\" is displayed.");
     callClassTest([&]() { RunGameTest::playerIsBust(); }, "playerIsBust()", "Ensure the message: \"Bob loses!\" is displayed.");
     callClassTest([&]() { RunGameTest::dealerIsBust(); }, "dealerIsBust()", "Ensure the message: \"Bob wins!\" is displayed.");
     callClassTest([&]() { RunGameTest::playerHasBlackjack(); }, "playerHasBlackjack()", "Ace must be 11.\nEnsure the message: \"Bob wins with Blackjack!\" is displayed.");
@@ -205,6 +201,10 @@ void TestingSuite::runGameTests() {
     callClassTest([&]() { RunGameTest::playerHigherValue(); }, "playerHigherValue()", "Ensure the message: \"Bob wins!\" is displayed.");
     callClassTest([&]() { RunGameTest::dealerHigherValue(); }, "dealerHigherValue()", "Ensure the message: \"Bob loses!\" is displayed.");
     callClassTest([&]() { RunGameTest::bothSameValue(); }, "bothSameValue()", "Ensure the message: \"Bob ties with dealer!\" is displayed.");
+    callClassTest([&]() { RunGameTest::playerTurn(); }, "playerTurn()", "No actions required. Just observe the outcome.");
+    callClassTest([&]() { RunGameTest::dealerTurn(); }, "dealerTurn()", "No actions required. Just observe the outcome.");
+    callClassTest([&]() { RunGameTest::keepPlaying(); }, "keepPlaying()", "Select the option to keep playing.");
+    callClassTest([&]() { RunGameTest::stopPlaying(); }, "stopPlaying()", "Select the option to stop playing.");
 
     classTestFooter(className);
 }
