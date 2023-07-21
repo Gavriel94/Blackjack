@@ -73,6 +73,9 @@ bool TestingSuite::testMenu() {
             break;
         }
     }
+    for(int i = 0; i < 100; i++) {
+        std::cout << "\n";
+    }
     switch(choice) {
         case 1:
             cardTests();
@@ -174,7 +177,7 @@ void TestingSuite::playerTests() {
     callClassTest([&]() { PlayerTest::blackjackWin(); }, "blackjackWin()", "Ace must be 11.");
     callClassTest([&]() { PlayerTest::standardWin(); }, "standardWin()", "");
     callClassTest([&]() { PlayerTest::hit(); }, "hit()", "Select `hit`.");
-    callClassTest([&]() { PlayerTest::stick(); }, "getStick()", "Select `getStick`.");
+    callClassTest([&]() { PlayerTest::stick(); }, "getStick()", "Select `stick`.");
     callClassTest([&]() { PlayerTest::comparePlayers(); }, "comparePlayers()", "");
 
     classTestFooter(className);
@@ -218,6 +221,7 @@ void TestingSuite::allTests() {
     playerTests();
     dealerTests();
     gameComponentsTests();
+    classTestFooter("All");
 }
 
 /**
@@ -249,7 +253,7 @@ void TestingSuite::classTestHeader(const std::string& testedClass) {
  */
 void TestingSuite::classTestFooter(const std::string& testedClass) {
     std::cout << boxBorder;
-    std::cout << "        " << testedClass << " tests Completed      \n";
+    std::cout << "     " << testedClass << " tests Completed      \n";
     std::cout << boxBorder;
     std::cout << "\n";
 }
