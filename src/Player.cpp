@@ -48,15 +48,15 @@ void Player::receiveCard(const Card& card) {
 bool Player::hitOrStick() {
     int choice = 0;
     while(choice < 1 || choice > 2) {
-        std::cout << name << ", hit or stick?\n";
-        std::cout << "Type 1 for hit or 2 for stick and press enter:\n";
+        std::cout << name << ", hit or getStick?\n";
+        std::cout << "Type 1 for hit or 2 for getStick and press enter:\n";
         std::cin >> choice;
         if(std::cin.fail()) {
             std::cin.clear(); /** Clear the fail state. */
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); /** Ignore the bad input. */
         } else if(choice < 1 || choice > 2) {
             std::cout << "Invalid input.\n"
-                         "Press 1 for hit or 2 for stick:\n\n";
+                         "Press 1 for hit or 2 for getStick:\n\n";
         } else {
             break;
         }

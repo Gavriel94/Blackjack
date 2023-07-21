@@ -51,11 +51,11 @@ public:
     void receiveCard(const Card& card);
 
     /**
-     * @brief Gives the player an option to hit or stick on their turn.
+     * @brief Gives the player an option to hit or getStick on their turn.
      *
      * Receives user input to determine the players action.
      *
-     * @return True if the player wants another card, false if the player wants to stick.
+     * @return True if the player wants another card, false if the player wants to getStick.
      */
     bool hitOrStick();
 
@@ -74,7 +74,7 @@ public:
      * - hand
      * - handValue
      * - playing
-     * - bust
+     * - getBust
      * - blackjack
      *
      * This ensures all games are independent from previous ones.
@@ -135,9 +135,9 @@ public:
     bool getPlaying() const;
 
     /**
-     * @brief A getter for the `bust` variable.
+     * @brief A getter for the `getBust` variable.
      *
-     * @return True if the player is bust, otherwise false.
+     * @return True if the player is getBust, otherwise false.
      */
     bool getBust() const;
 
@@ -207,7 +207,7 @@ private:
     bool playing;
 
     /**
-     * @brief A boolean indicating if a player is bust or not.
+     * @brief A boolean indicating if a player is getBust or not.
      */
     bool bust;
 
