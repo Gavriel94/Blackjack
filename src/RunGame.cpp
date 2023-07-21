@@ -102,7 +102,7 @@ void RunGame::gameLoop() {
  * @brief See declaration in RunGame.h for details.
  */
 void RunGame::playerTurn(Player& player) {
-    /** Player receives two cards then decides to hit or getStick. */
+    /** Player receives two cards then decides to hit or stick. */
     player.receiveCard(deck.removeCard());
     player.receiveCard(deck.removeCard());
     player.printHand();

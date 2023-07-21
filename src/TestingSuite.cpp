@@ -177,7 +177,7 @@ void TestingSuite::playerTests() {
     callClassTest([&]() { PlayerTest::blackjackWin(); }, "blackjackWin()", "Ace must be 11.");
     callClassTest([&]() { PlayerTest::standardWin(); }, "standardWin()", "");
     callClassTest([&]() { PlayerTest::hit(); }, "hit()", "Select `hit`.");
-    callClassTest([&]() { PlayerTest::stick(); }, "getStick()", "Select `stick`.");
+    callClassTest([&]() { PlayerTest::stick(); }, "stick()", "Select `stick`.");
     callClassTest([&]() { PlayerTest::comparePlayers(); }, "comparePlayers()", "");
 
     classTestFooter(className);
