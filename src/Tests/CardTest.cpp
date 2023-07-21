@@ -1,11 +1,20 @@
-//
-// Created by Anthony Gavriel on 30/06/2023.
-//
+/**
+ * @file CardTest.cpp
+ * @brief The implementation of the CardTest class and its functions.
+ * @author Anthony Gavriel
+ * @date 06/07/2023
+ */
 
 #include "../../include/Tests/CardTest.h"
 
+/**
+ * @brief Default constructor for CardTest.
+ */
 CardTest::CardTest() = default;
 
+/**
+ * @brief See declaration in CardTest.h for details.
+ */
 void CardTest::getSuit() {
     Card::Suit suitArray[4] = {Card::DIAMONDS, Card::SPADES, Card::CLUBS, Card::HEARTS };
     std::string suitStringArray[4] = {"Diamonds", "Spades", "Clubs", "Hearts"};
@@ -17,6 +26,9 @@ void CardTest::getSuit() {
     }
 }
 
+/**
+ * @brief See declaration in CardTest.h for details.
+ */
 void CardTest::getValue() {
     Card::Value valueArray[13] = {
             Card::TWO, Card::THREE,
@@ -45,6 +57,9 @@ void CardTest::getValue() {
     }
 }
 
+/**
+ * @brief See declaration in CardTest.h for details.
+ */
 void CardTest::ascii() {
     Card card = Card(Card::DIAMONDS, Card::TWO);
     std::cout << "2 of Diamonds\n\n";
