@@ -21,24 +21,4 @@ Each component of the game has been tested using a large testing suite class, en
 <br>
 
 To run the game, clone the repo and run `$ ./Blackjack`
-If this doesn't work, it will need building. 
-<br>
-
-<ul>
-  <li>
-    Navigate to the build folder `$ cd build`
-  </li>
-  <li>
-    run `cmake ..`
-  </li>
-  <li>
-    run `make`
-  </li>
-  <li>
-    Run `$ ./Blackjack`
-  </li>
-</ul>
-
-<br>
-<br>
 To enter the testing suite use `$ ./Blackjack test`
